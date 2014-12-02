@@ -1,0 +1,6 @@
+Pods/
+Podfile.lock
+*.xcworkspace
+*.xcworkspacedata
+project.pbxproj
+UserInterfaceState.xcuserstate
