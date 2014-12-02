@@ -1,1163 +1,578 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>03F500182B51AF9CCB04C395</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F6E89D6C054EFA2E5FFD5C3B</string>
-				<string>E2496CFBCBECEE7E2DB15688</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0D6CBD93E2D5E25CFF1DCB2B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>2753004635E628C717221B84</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>2D28993F887B49B0182350FF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2753004635E628C717221B84</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5213D1731A2D2B8B00BF5098</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5213D17E1A2D2B8B00BF5098</string>
-				<string>5213D1961A2D2B8B00BF5098</string>
-				<string>5213D17D1A2D2B8B00BF5098</string>
-				<string>5213D1BB1A2D775200BF5098</string>
-				<string>03F500182B51AF9CCB04C395</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5213D1741A2D2B8B00BF5098</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastUpgradeCheck</key>
-				<string>0620</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>Jacob</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>5213D17B1A2D2B8B00BF5098</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>6.2</string>
-					</dict>
-					<key>5213D1921A2D2B8B00BF5098</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>6.2</string>
-						<key>TestTargetID</key>
-						<string>5213D17B1A2D2B8B00BF5098</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>5213D1771A2D2B8B00BF5098</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-				<string>Base</string>
-			</array>
-			<key>mainGroup</key>
-			<string>5213D1731A2D2B8B00BF5098</string>
-			<key>productRefGroup</key>
-			<string>5213D17D1A2D2B8B00BF5098</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>5213D17B1A2D2B8B00BF5098</string>
-				<string>5213D1921A2D2B8B00BF5098</string>
-			</array>
-		</dict>
-		<key>5213D1771A2D2B8B00BF5098</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>5213D19B1A2D2B8B00BF5098</string>
-				<string>5213D19C1A2D2B8B00BF5098</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>5213D1781A2D2B8B00BF5098</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>5213D1821A2D2B8B00BF5098</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5213D1791A2D2B8B00BF5098</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>5213D1BA1A2D773100BF5098</string>
-				<string>5213D1B81A2D772600BF5098</string>
-				<string>5213D1B61A2D771600BF5098</string>
-				<string>5213D1B41A2D770F00BF5098</string>
-				<string>5213D1B21A2D76FF00BF5098</string>
-				<string>5213D1B01A2D76E700BF5098</string>
-				<string>5213D1AE1A2D76D300BF5098</string>
-				<string>5213D1AC1A2D76CD00BF5098</string>
-				<string>5213D1AA1A2D76C700BF5098</string>
-				<string>5213D1A81A2D76B900BF5098</string>
-				<string>5213D1A51A2D76AC00BF5098</string>
-				<string>5213D1A61A2D76AC00BF5098</string>
-				<string>2D28993F887B49B0182350FF</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5213D17A1A2D2B8B00BF5098</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>5213D1891A2D2B8B00BF5098</string>
-				<string>5213D18E1A2D2B8B00BF5098</string>
-				<string>5213D18B1A2D2B8B00BF5098</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5213D17B1A2D2B8B00BF5098</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>5213D19D1A2D2B8B00BF5098</string>
-			<key>buildPhases</key>
-			<array>
-				<string>71F07BD45634BA010B3B69D6</string>
-				<string>5213D1781A2D2B8B00BF5098</string>
-				<string>5213D1791A2D2B8B00BF5098</string>
-				<string>5213D17A1A2D2B8B00BF5098</string>
-				<string>0D6CBD93E2D5E25CFF1DCB2B</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>One West The Road to Oz</string>
-			<key>productName</key>
-			<string>One West The Road to Oz</string>
-			<key>productReference</key>
-			<string>5213D17C1A2D2B8B00BF5098</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>5213D17C1A2D2B8B00BF5098</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>One West The Road to Oz.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>5213D17D1A2D2B8B00BF5098</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5213D17C1A2D2B8B00BF5098</string>
-				<string>5213D1931A2D2B8B00BF5098</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5213D17E1A2D2B8B00BF5098</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5213D1811A2D2B8B00BF5098</string>
-				<string>5213D1871A2D2B8B00BF5098</string>
-				<string>5213D18A1A2D2B8B00BF5098</string>
-				<string>5213D18C1A2D2B8B00BF5098</string>
-				<string>5213D17F1A2D2B8B00BF5098</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>One West The Road to Oz</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5213D17F1A2D2B8B00BF5098</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5213D1801A2D2B8B00BF5098</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5213D1801A2D2B8B00BF5098</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5213D1811A2D2B8B00BF5098</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>AppDelegate.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5213D1821A2D2B8B00BF5098</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5213D1811A2D2B8B00BF5098</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5213D1871A2D2B8B00BF5098</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5213D1881A2D2B8B00BF5098</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5213D1881A2D2B8B00BF5098</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5213D1891A2D2B8B00BF5098</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5213D1871A2D2B8B00BF5098</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5213D18A1A2D2B8B00BF5098</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Images.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5213D18B1A2D2B8B00BF5098</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5213D18A1A2D2B8B00BF5098</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5213D18C1A2D2B8B00BF5098</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5213D18D1A2D2B8B00BF5098</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>LaunchScreen.xib</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5213D18D1A2D2B8B00BF5098</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.xib</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/LaunchScreen.xib</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5213D18E1A2D2B8B00BF5098</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5213D18C1A2D2B8B00BF5098</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5213D18F1A2D2B8B00BF5098</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>5213D19A1A2D2B8B00BF5098</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5213D1901A2D2B8B00BF5098</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5213D1911A2D2B8B00BF5098</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5213D1921A2D2B8B00BF5098</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>5213D1A01A2D2B8B00BF5098</string>
-			<key>buildPhases</key>
-			<array>
-				<string>5213D18F1A2D2B8B00BF5098</string>
-				<string>5213D1901A2D2B8B00BF5098</string>
-				<string>5213D1911A2D2B8B00BF5098</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>5213D1951A2D2B8B00BF5098</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>One West The Road to OzTests</string>
-			<key>productName</key>
-			<string>One West The Road to OzTests</string>
-			<key>productReference</key>
-			<string>5213D1931A2D2B8B00BF5098</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>5213D1931A2D2B8B00BF5098</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>One West The Road to OzTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>5213D1941A2D2B8B00BF5098</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>5213D1741A2D2B8B00BF5098</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>5213D17B1A2D2B8B00BF5098</string>
-			<key>remoteInfo</key>
-			<string>One West The Road to Oz</string>
-		</dict>
-		<key>5213D1951A2D2B8B00BF5098</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>5213D17B1A2D2B8B00BF5098</string>
-			<key>targetProxy</key>
-			<string>5213D1941A2D2B8B00BF5098</string>
-		</dict>
-		<key>5213D1961A2D2B8B00BF5098</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5213D1991A2D2B8B00BF5098</string>
-				<string>5213D1971A2D2B8B00BF5098</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>One West The Road to OzTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5213D1971A2D2B8B00BF5098</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5213D1981A2D2B8B00BF5098</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5213D1981A2D2B8B00BF5098</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5213D1991A2D2B8B00BF5098</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>One_West_The_Road_to_OzTests.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5213D19A1A2D2B8B00BF5098</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5213D1991A2D2B8B00BF5098</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5213D19B1A2D2B8B00BF5098</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.2</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>5213D19C1A2D2B8B00BF5098</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.2</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>5213D19D1A2D2B8B00BF5098</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>5213D19E1A2D2B8B00BF5098</string>
-				<string>5213D19F1A2D2B8B00BF5098</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>5213D19E1A2D2B8B00BF5098</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>F6E89D6C054EFA2E5FFD5C3B</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>/Users/test/Documents/Development/Swipr</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>One West The Road to Oz/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>5213D19F1A2D2B8B00BF5098</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>E2496CFBCBECEE7E2DB15688</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>/Users/test/Documents/Development/Swipr</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>One West The Road to Oz/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>5213D1A01A2D2B8B00BF5098</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>5213D1A11A2D2B8B00BF5098</string>
-				<string>5213D1A21A2D2B8B00BF5098</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>5213D1A11A2D2B8B00BF5098</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>One West The Road to OzTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/One West The Road to Oz.app/One West The Road to Oz</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>5213D1A21A2D2B8B00BF5098</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>One West The Road to OzTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/One West The Road to Oz.app/One West The Road to Oz</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>5213D1A31A2D76AC00BF5098</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Bolts.framework</string>
-			<key>path</key>
-			<string>../Swipr/Bolts.framework</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5213D1A41A2D76AC00BF5098</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Parse.framework</string>
-			<key>path</key>
-			<string>../Swipr/Parse.framework</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5213D1A51A2D76AC00BF5098</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5213D1A31A2D76AC00BF5098</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5213D1A61A2D76AC00BF5098</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5213D1A41A2D76AC00BF5098</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5213D1A71A2D76B900BF5098</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>SystemConfiguration.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/SystemConfiguration.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>5213D1A81A2D76B900BF5098</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5213D1A71A2D76B900BF5098</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5213D1A91A2D76C700BF5098</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>StoreKit.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/StoreKit.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>5213D1AA1A2D76C700BF5098</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5213D1A91A2D76C700BF5098</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5213D1AB1A2D76CD00BF5098</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Security.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/Security.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>5213D1AC1A2D76CD00BF5098</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5213D1AB1A2D76CD00BF5098</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5213D1AD1A2D76D300BF5098</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>QuartzCore.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/QuartzCore.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>5213D1AE1A2D76D300BF5098</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5213D1AD1A2D76D300BF5098</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5213D1AF1A2D76E700BF5098</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>MobileCoreServices.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/MobileCoreServices.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>5213D1B01A2D76E700BF5098</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5213D1AF1A2D76E700BF5098</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5213D1B11A2D76FF00BF5098</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>compiled.mach-o.dylib</string>
-			<key>name</key>
-			<string>libz.dylib</string>
-			<key>path</key>
-			<string>usr/lib/libz.dylib</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>5213D1B21A2D76FF00BF5098</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5213D1B11A2D76FF00BF5098</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5213D1B31A2D770F00BF5098</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CoreLocation.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/CoreLocation.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>5213D1B41A2D770F00BF5098</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5213D1B31A2D770F00BF5098</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5213D1B51A2D771600BF5098</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CoreGraphics.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/CoreGraphics.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>5213D1B61A2D771600BF5098</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5213D1B51A2D771600BF5098</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5213D1B71A2D772600BF5098</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CFNetwork.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/CFNetwork.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>5213D1B81A2D772600BF5098</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5213D1B71A2D772600BF5098</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5213D1B91A2D773100BF5098</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>AudioToolbox.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/AudioToolbox.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>5213D1BA1A2D773100BF5098</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5213D1B91A2D773100BF5098</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5213D1BB1A2D775200BF5098</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5213D1B91A2D773100BF5098</string>
-				<string>5213D1B71A2D772600BF5098</string>
-				<string>5213D1B51A2D771600BF5098</string>
-				<string>5213D1B31A2D770F00BF5098</string>
-				<string>5213D1B11A2D76FF00BF5098</string>
-				<string>5213D1AF1A2D76E700BF5098</string>
-				<string>5213D1AD1A2D76D300BF5098</string>
-				<string>5213D1AB1A2D76CD00BF5098</string>
-				<string>5213D1A91A2D76C700BF5098</string>
-				<string>5213D1A71A2D76B900BF5098</string>
-				<string>5213D1A31A2D76AC00BF5098</string>
-				<string>5213D1A41A2D76AC00BF5098</string>
-				<string>2753004635E628C717221B84</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>71F07BD45634BA010B3B69D6</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>E2496CFBCBECEE7E2DB15688</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods/Pods.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F6E89D6C054EFA2E5FFD5C3B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods/Pods.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>5213D1741A2D2B8B00BF5098</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2D28993F887B49B0182350FF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2753004635E628C717221B84 /* libPods.a */; };
+		5213D1821A2D2B8B00BF5098 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5213D1811A2D2B8B00BF5098 /* AppDelegate.swift */; };
+		5213D1891A2D2B8B00BF5098 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5213D1871A2D2B8B00BF5098 /* Main.storyboard */; };
+		5213D18B1A2D2B8B00BF5098 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5213D18A1A2D2B8B00BF5098 /* Images.xcassets */; };
+		5213D18E1A2D2B8B00BF5098 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5213D18C1A2D2B8B00BF5098 /* LaunchScreen.xib */; };
+		5213D19A1A2D2B8B00BF5098 /* One_West_The_Road_to_OzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5213D1991A2D2B8B00BF5098 /* One_West_The_Road_to_OzTests.swift */; };
+		5213D1A51A2D76AC00BF5098 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5213D1A31A2D76AC00BF5098 /* Bolts.framework */; };
+		5213D1A61A2D76AC00BF5098 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5213D1A41A2D76AC00BF5098 /* Parse.framework */; };
+		5213D1A81A2D76B900BF5098 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5213D1A71A2D76B900BF5098 /* SystemConfiguration.framework */; };
+		5213D1AA1A2D76C700BF5098 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5213D1A91A2D76C700BF5098 /* StoreKit.framework */; };
+		5213D1AC1A2D76CD00BF5098 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5213D1AB1A2D76CD00BF5098 /* Security.framework */; };
+		5213D1AE1A2D76D300BF5098 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5213D1AD1A2D76D300BF5098 /* QuartzCore.framework */; };
+		5213D1B01A2D76E700BF5098 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5213D1AF1A2D76E700BF5098 /* MobileCoreServices.framework */; };
+		5213D1B21A2D76FF00BF5098 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5213D1B11A2D76FF00BF5098 /* libz.dylib */; };
+		5213D1B41A2D770F00BF5098 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5213D1B31A2D770F00BF5098 /* CoreLocation.framework */; };
+		5213D1B61A2D771600BF5098 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5213D1B51A2D771600BF5098 /* CoreGraphics.framework */; };
+		5213D1B81A2D772600BF5098 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5213D1B71A2D772600BF5098 /* CFNetwork.framework */; };
+		5213D1BA1A2D773100BF5098 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5213D1B91A2D773100BF5098 /* AudioToolbox.framework */; };
+		52814F201A2D7C8A00835680 /* NavDrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52814F1F1A2D7C8A00835680 /* NavDrawerViewController.swift */; };
+		52814F251A2D829600835680 /* NavDrawerTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52814F241A2D829600835680 /* NavDrawerTableCell.swift */; };
+		52814F271A2D82B100835680 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52814F261A2D82B100835680 /* User.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5213D1941A2D2B8B00BF5098 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5213D1741A2D2B8B00BF5098 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5213D17B1A2D2B8B00BF5098;
+			remoteInfo = "One West The Road to Oz";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2753004635E628C717221B84 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5213D17C1A2D2B8B00BF5098 /* One West The Road to Oz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "One West The Road to Oz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5213D1801A2D2B8B00BF5098 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5213D1811A2D2B8B00BF5098 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5213D1881A2D2B8B00BF5098 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5213D18A1A2D2B8B00BF5098 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5213D18D1A2D2B8B00BF5098 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		5213D1931A2D2B8B00BF5098 /* One West The Road to OzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "One West The Road to OzTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5213D1981A2D2B8B00BF5098 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5213D1991A2D2B8B00BF5098 /* One_West_The_Road_to_OzTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = One_West_The_Road_to_OzTests.swift; sourceTree = "<group>"; };
+		5213D1A31A2D76AC00BF5098 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = ../Swipr/Bolts.framework; sourceTree = "<group>"; };
+		5213D1A41A2D76AC00BF5098 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../Swipr/Parse.framework; sourceTree = "<group>"; };
+		5213D1A71A2D76B900BF5098 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		5213D1A91A2D76C700BF5098 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		5213D1AB1A2D76CD00BF5098 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		5213D1AD1A2D76D300BF5098 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		5213D1AF1A2D76E700BF5098 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		5213D1B11A2D76FF00BF5098 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		5213D1B31A2D770F00BF5098 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		5213D1B51A2D771600BF5098 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5213D1B71A2D772600BF5098 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		5213D1B91A2D773100BF5098 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		52814F171A2D7B6800835680 /* One West The Road to Oz-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "One West The Road to Oz-Bridging-Header.h"; sourceTree = "<group>"; };
+		52814F1F1A2D7C8A00835680 /* NavDrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavDrawerViewController.swift; sourceTree = "<group>"; };
+		52814F241A2D829600835680 /* NavDrawerTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavDrawerTableCell.swift; sourceTree = "<group>"; };
+		52814F261A2D82B100835680 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E2496CFBCBECEE7E2DB15688 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		F6E89D6C054EFA2E5FFD5C3B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5213D1791A2D2B8B00BF5098 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5213D1BA1A2D773100BF5098 /* AudioToolbox.framework in Frameworks */,
+				5213D1B81A2D772600BF5098 /* CFNetwork.framework in Frameworks */,
+				5213D1B61A2D771600BF5098 /* CoreGraphics.framework in Frameworks */,
+				5213D1B41A2D770F00BF5098 /* CoreLocation.framework in Frameworks */,
+				5213D1B21A2D76FF00BF5098 /* libz.dylib in Frameworks */,
+				5213D1B01A2D76E700BF5098 /* MobileCoreServices.framework in Frameworks */,
+				5213D1AE1A2D76D300BF5098 /* QuartzCore.framework in Frameworks */,
+				5213D1AC1A2D76CD00BF5098 /* Security.framework in Frameworks */,
+				5213D1AA1A2D76C700BF5098 /* StoreKit.framework in Frameworks */,
+				5213D1A81A2D76B900BF5098 /* SystemConfiguration.framework in Frameworks */,
+				5213D1A51A2D76AC00BF5098 /* Bolts.framework in Frameworks */,
+				5213D1A61A2D76AC00BF5098 /* Parse.framework in Frameworks */,
+				2D28993F887B49B0182350FF /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5213D1901A2D2B8B00BF5098 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03F500182B51AF9CCB04C395 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F6E89D6C054EFA2E5FFD5C3B /* Pods.debug.xcconfig */,
+				E2496CFBCBECEE7E2DB15688 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5213D1731A2D2B8B00BF5098 = {
+			isa = PBXGroup;
+			children = (
+				5213D17E1A2D2B8B00BF5098 /* One West The Road to Oz */,
+				5213D1961A2D2B8B00BF5098 /* One West The Road to OzTests */,
+				5213D17D1A2D2B8B00BF5098 /* Products */,
+				5213D1BB1A2D775200BF5098 /* Frameworks */,
+				03F500182B51AF9CCB04C395 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		5213D17D1A2D2B8B00BF5098 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5213D17C1A2D2B8B00BF5098 /* One West The Road to Oz.app */,
+				5213D1931A2D2B8B00BF5098 /* One West The Road to OzTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5213D17E1A2D2B8B00BF5098 /* One West The Road to Oz */ = {
+			isa = PBXGroup;
+			children = (
+				52814F211A2D7C8F00835680 /* Models */,
+				52814F221A2D7C9A00835680 /* Views */,
+				52814F231A2D7CA000835680 /* Controllers */,
+				5213D1871A2D2B8B00BF5098 /* Main.storyboard */,
+				5213D18A1A2D2B8B00BF5098 /* Images.xcassets */,
+				5213D18C1A2D2B8B00BF5098 /* LaunchScreen.xib */,
+				5213D17F1A2D2B8B00BF5098 /* Supporting Files */,
+			);
+			path = "One West The Road to Oz";
+			sourceTree = "<group>";
+		};
+		5213D17F1A2D2B8B00BF5098 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				52814F171A2D7B6800835680 /* One West The Road to Oz-Bridging-Header.h */,
+				5213D1811A2D2B8B00BF5098 /* AppDelegate.swift */,
+				5213D1801A2D2B8B00BF5098 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5213D1961A2D2B8B00BF5098 /* One West The Road to OzTests */ = {
+			isa = PBXGroup;
+			children = (
+				5213D1991A2D2B8B00BF5098 /* One_West_The_Road_to_OzTests.swift */,
+				5213D1971A2D2B8B00BF5098 /* Supporting Files */,
+			);
+			path = "One West The Road to OzTests";
+			sourceTree = "<group>";
+		};
+		5213D1971A2D2B8B00BF5098 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5213D1981A2D2B8B00BF5098 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5213D1BB1A2D775200BF5098 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5213D1B91A2D773100BF5098 /* AudioToolbox.framework */,
+				5213D1B71A2D772600BF5098 /* CFNetwork.framework */,
+				5213D1B51A2D771600BF5098 /* CoreGraphics.framework */,
+				5213D1B31A2D770F00BF5098 /* CoreLocation.framework */,
+				5213D1B11A2D76FF00BF5098 /* libz.dylib */,
+				5213D1AF1A2D76E700BF5098 /* MobileCoreServices.framework */,
+				5213D1AD1A2D76D300BF5098 /* QuartzCore.framework */,
+				5213D1AB1A2D76CD00BF5098 /* Security.framework */,
+				5213D1A91A2D76C700BF5098 /* StoreKit.framework */,
+				5213D1A71A2D76B900BF5098 /* SystemConfiguration.framework */,
+				5213D1A31A2D76AC00BF5098 /* Bolts.framework */,
+				5213D1A41A2D76AC00BF5098 /* Parse.framework */,
+				2753004635E628C717221B84 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		52814F211A2D7C8F00835680 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				52814F261A2D82B100835680 /* User.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		52814F221A2D7C9A00835680 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				52814F241A2D829600835680 /* NavDrawerTableCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		52814F231A2D7CA000835680 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				52814F1F1A2D7C8A00835680 /* NavDrawerViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5213D17B1A2D2B8B00BF5098 /* One West The Road to Oz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5213D19D1A2D2B8B00BF5098 /* Build configuration list for PBXNativeTarget "One West The Road to Oz" */;
+			buildPhases = (
+				71F07BD45634BA010B3B69D6 /* Check Pods Manifest.lock */,
+				5213D1781A2D2B8B00BF5098 /* Sources */,
+				5213D1791A2D2B8B00BF5098 /* Frameworks */,
+				5213D17A1A2D2B8B00BF5098 /* Resources */,
+				0D6CBD93E2D5E25CFF1DCB2B /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "One West The Road to Oz";
+			productName = "One West The Road to Oz";
+			productReference = 5213D17C1A2D2B8B00BF5098 /* One West The Road to Oz.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5213D1921A2D2B8B00BF5098 /* One West The Road to OzTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5213D1A01A2D2B8B00BF5098 /* Build configuration list for PBXNativeTarget "One West The Road to OzTests" */;
+			buildPhases = (
+				5213D18F1A2D2B8B00BF5098 /* Sources */,
+				5213D1901A2D2B8B00BF5098 /* Frameworks */,
+				5213D1911A2D2B8B00BF5098 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5213D1951A2D2B8B00BF5098 /* PBXTargetDependency */,
+			);
+			name = "One West The Road to OzTests";
+			productName = "One West The Road to OzTests";
+			productReference = 5213D1931A2D2B8B00BF5098 /* One West The Road to OzTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5213D1741A2D2B8B00BF5098 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = Jacob;
+				TargetAttributes = {
+					5213D17B1A2D2B8B00BF5098 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					5213D1921A2D2B8B00BF5098 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 5213D17B1A2D2B8B00BF5098;
+					};
+				};
+			};
+			buildConfigurationList = 5213D1771A2D2B8B00BF5098 /* Build configuration list for PBXProject "One West The Road to Oz" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5213D1731A2D2B8B00BF5098;
+			productRefGroup = 5213D17D1A2D2B8B00BF5098 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5213D17B1A2D2B8B00BF5098 /* One West The Road to Oz */,
+				5213D1921A2D2B8B00BF5098 /* One West The Road to OzTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5213D17A1A2D2B8B00BF5098 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5213D1891A2D2B8B00BF5098 /* Main.storyboard in Resources */,
+				5213D18E1A2D2B8B00BF5098 /* LaunchScreen.xib in Resources */,
+				5213D18B1A2D2B8B00BF5098 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5213D1911A2D2B8B00BF5098 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0D6CBD93E2D5E25CFF1DCB2B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		71F07BD45634BA010B3B69D6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5213D1781A2D2B8B00BF5098 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52814F271A2D82B100835680 /* User.swift in Sources */,
+				52814F251A2D829600835680 /* NavDrawerTableCell.swift in Sources */,
+				5213D1821A2D2B8B00BF5098 /* AppDelegate.swift in Sources */,
+				52814F201A2D7C8A00835680 /* NavDrawerViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5213D18F1A2D2B8B00BF5098 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5213D19A1A2D2B8B00BF5098 /* One_West_The_Road_to_OzTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5213D1951A2D2B8B00BF5098 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5213D17B1A2D2B8B00BF5098 /* One West The Road to Oz */;
+			targetProxy = 5213D1941A2D2B8B00BF5098 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5213D1871A2D2B8B00BF5098 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5213D1881A2D2B8B00BF5098 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5213D18C1A2D2B8B00BF5098 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5213D18D1A2D2B8B00BF5098 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5213D19B1A2D2B8B00BF5098 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5213D19C1A2D2B8B00BF5098 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5213D19E1A2D2B8B00BF5098 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6E89D6C054EFA2E5FFD5C3B /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/test/Documents/Development/Swipr,
+				);
+				INFOPLIST_FILE = "One West The Road to Oz/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "One West The Road to Oz/One West The Road to Oz-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5213D19F1A2D2B8B00BF5098 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2496CFBCBECEE7E2DB15688 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/test/Documents/Development/Swipr,
+				);
+				INFOPLIST_FILE = "One West The Road to Oz/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "One West The Road to Oz/One West The Road to Oz-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		5213D1A11A2D2B8B00BF5098 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "One West The Road to OzTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/One West The Road to Oz.app/One West The Road to Oz";
+			};
+			name = Debug;
+		};
+		5213D1A21A2D2B8B00BF5098 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "One West The Road to OzTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/One West The Road to Oz.app/One West The Road to Oz";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5213D1771A2D2B8B00BF5098 /* Build configuration list for PBXProject "One West The Road to Oz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5213D19B1A2D2B8B00BF5098 /* Debug */,
+				5213D19C1A2D2B8B00BF5098 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5213D19D1A2D2B8B00BF5098 /* Build configuration list for PBXNativeTarget "One West The Road to Oz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5213D19E1A2D2B8B00BF5098 /* Debug */,
+				5213D19F1A2D2B8B00BF5098 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5213D1A01A2D2B8B00BF5098 /* Build configuration list for PBXNativeTarget "One West The Road to OzTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5213D1A11A2D2B8B00BF5098 /* Debug */,
+				5213D1A21A2D2B8B00BF5098 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5213D1741A2D2B8B00BF5098 /* Project object */;
+}
