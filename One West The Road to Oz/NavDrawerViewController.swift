@@ -14,8 +14,16 @@ class NavDrawerViewController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet weak var bannerImageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     
+    var navArray : Array<String> = ["Workouts", "Information", "TT Results", "Settings"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupProfileImage()
+    }
+    
+    func setupProfileImage() {
+        self.profileImageView.layer.cornerRadius = self.profileImageView.frame.size.width/2
+        self.profileImageView.clipsToBounds = true
     }
     
     // MARK: Table View Data Source
@@ -25,11 +33,18 @@ class NavDrawerViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return navArray.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
+        var cell : NavDrawerTableCell = tableView.dequeueReusableCellWithIdentifier("navDrawerCell", forIndexPath: indexPath) as NavDrawerTableCell
+        
+        let navItem = navArray[indexPath.row]
+        
+        cell.navLabel.text = navItem
+        
+        return cell
 
     }
     

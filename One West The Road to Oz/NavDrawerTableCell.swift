@@ -9,5 +9,11 @@
 import UIKit
 
 class NavDrawerTableCell: UITableViewCell {
+    
+    @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak var navLabel: UILabel!
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
 
 }

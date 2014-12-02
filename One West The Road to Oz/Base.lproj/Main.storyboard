@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6221" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6221" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4Ad-zb-4fb">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Nav Drawer View Controller-->
         <scene sceneID="0bK-cz-zFi">
             <objects>
-                <viewController id="go5-iY-JeV" customClass="NavDrawerViewController" customModule="One_West_The_Road_to_Oz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NavDrawerViewController" title="Nav Drawer View Controller" id="go5-iY-JeV" customClass="NavDrawerViewController" customModule="One_West_The_Road_to_Oz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5Pm-kg-MyK"/>
                         <viewControllerLayoutGuide type="bottom" id="68e-Qy-fmT"/>
@@ -16,17 +17,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jUp-If-puM">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jUp-If-puM">
                                 <rect key="frame" x="0.0" y="-5" width="600" height="211"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="212" id="c4E-2o-Fp4"/>
+                                </constraints>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="212"/>
+                                </variation>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vye-S7-hhB">
-                                <rect key="frame" x="41" y="114" width="187" height="183"/>
-                            </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="pdS-1e-Skg">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="pdS-1e-Skg">
                                 <rect key="frame" x="41" y="296" width="518" height="304"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="90" id="oiH-LB-R52">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="navDrawerCell" rowHeight="90" id="oiH-LB-R52" customClass="NavDrawerTableCell" customModule="One_West_The_Road_to_Oz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="559" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oiH-LB-R52" id="VPx-Yl-Fm5">
@@ -34,20 +38,75 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CkG-Eb-JFa">
                                                     <rect key="frame" x="33" y="1" width="149" height="89"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="33" y="3" width="98" height="89"/>
+                                                    </variation>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUx-xa-Zvx">
                                                     <rect key="frame" x="190" y="8" width="320" height="74"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="145" y="9" width="166" height="74"/>
+                                                    </variation>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="iconImageView" destination="CkG-Eb-JFa" id="WPM-7l-qPe"/>
+                                            <outlet property="navLabel" destination="qUx-xa-Zvx" id="EVY-9R-zsH"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="41" y="303" width="318" height="297"/>
+                                </variation>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vye-S7-hhB">
+                                <rect key="frame" x="41" y="112" width="187" height="183"/>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="41" y="118" width="187" height="183"/>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pdS-1e-Skg" firstAttribute="top" secondItem="Vye-S7-hhB" secondAttribute="bottom" constant="2" id="3gp-XS-gFW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pdS-1e-Skg" secondAttribute="trailing" constant="25" id="7aI-se-6wN"/>
+                            <constraint firstItem="68e-Qy-fmT" firstAttribute="top" secondItem="pdS-1e-Skg" secondAttribute="bottom" id="9Qc-Ie-mQC"/>
+                            <constraint firstItem="jUp-If-puM" firstAttribute="width" secondItem="t0u-9L-4nP" secondAttribute="width" id="CY1-td-pvN"/>
+                            <constraint firstItem="jUp-If-puM" firstAttribute="top" secondItem="5Pm-kg-MyK" secondAttribute="bottom" constant="-20" id="FYs-Zx-V7f"/>
+                            <constraint firstAttribute="centerX" secondItem="pdS-1e-Skg" secondAttribute="centerX" id="Roa-jp-JrU"/>
+                            <constraint firstItem="pdS-1e-Skg" firstAttribute="leading" secondItem="t0u-9L-4nP" secondAttribute="leadingMargin" constant="25" id="bHv-FL-5XQ"/>
+                            <constraint firstItem="Vye-S7-hhB" firstAttribute="centerY" secondItem="jUp-If-puM" secondAttribute="centerY" constant="103.5" id="ba0-Ua-OKx"/>
+                            <constraint firstItem="jUp-If-puM" firstAttribute="top" secondItem="5Pm-kg-MyK" secondAttribute="bottom" constant="-26" id="lzN-q7-eeg"/>
+                            <constraint firstItem="Vye-S7-hhB" firstAttribute="top" secondItem="jUp-If-puM" secondAttribute="bottom" constant="-94" id="mUa-yp-pmS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jUp-If-puM" secondAttribute="trailing" constant="-16" id="nv3-Xz-hj2"/>
+                            <constraint firstItem="jUp-If-puM" firstAttribute="leading" secondItem="t0u-9L-4nP" secondAttribute="leadingMargin" constant="-16" id="rjZ-OP-Eko"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="FYs-Zx-V7f"/>
+                                <exclude reference="ba0-Ua-OKx"/>
+                                <exclude reference="3gp-XS-gFW"/>
+                                <exclude reference="7aI-se-6wN"/>
+                                <exclude reference="Roa-jp-JrU"/>
+                                <exclude reference="bHv-FL-5XQ"/>
+                                <exclude reference="9Qc-Ie-mQC"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="FYs-Zx-V7f"/>
+                                <include reference="ba0-Ua-OKx"/>
+                                <include reference="3gp-XS-gFW"/>
+                                <include reference="7aI-se-6wN"/>
+                                <include reference="Roa-jp-JrU"/>
+                                <include reference="bHv-FL-5XQ"/>
+                                <include reference="9Qc-Ie-mQC"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="bannerImageView" destination="jUp-If-puM" id="rib-WS-5Ur"/>
@@ -57,7 +116,76 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qop-xD-F1N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="302" y="-261"/>
+            <point key="canvasLocation" x="301.5" y="-264"/>
+        </scene>
+        <!--Container View Controller-->
+        <scene sceneID="fvu-BX-AOV">
+            <objects>
+                <viewController id="c3S-Xw-80g" customClass="ContainerViewController" customModule="One_West_The_Road_to_Oz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7PP-MR-bJa"/>
+                        <viewControllerLayoutGuide type="bottom" id="q7f-0S-ChD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jmc-dE-ZFx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y5F-4h-TLn">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <segue destination="XfS-Q1-gJ9" kind="embed" id="dvj-5U-3gd"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="m7H-cf-0kM">
+                        <barButtonItem key="leftBarButtonItem" systemItem="reply" id="0v8-hf-xPR">
+                            <connections>
+                                <action selector="navDrawerBarButtonPressed:" destination="c3S-Xw-80g" id="EJv-Ho-WPb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cCH-s1-mfo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2045" y="-264"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fLn-T9-zzt">
+            <objects>
+                <viewController id="XfS-Q1-gJ9" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PxL-zX-1NP"/>
+                        <viewControllerLayoutGuide type="bottom" id="akV-kW-srl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jxB-aU-iun">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ejd-Ek-55y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2816" y="-264"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4KX-1l-5Jx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4Ad-zb-4fb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FW3-8q-nHM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="c3S-Xw-80g" kind="relationship" relationship="rootViewController" id="EDs-w9-PTC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="haV-c8-nlj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1275" y="-264"/>
         </scene>
     </scenes>
 </document>
