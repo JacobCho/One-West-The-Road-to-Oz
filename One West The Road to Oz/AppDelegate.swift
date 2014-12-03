@@ -17,6 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
+        // Set Container View Controller as root VC
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        let containerViewController = ContainerViewController()
+        window!.rootViewController = containerViewController
+        window!.makeKeyAndVisible()
+    
+        
         // Set up Parse
         Parse.setApplicationId("GIjGjm5fIKYz1XQE87cSBWhMKPVp55chkjCdUe7D", clientKey: "mYD9mConowIJQCn1TzMzm2NCsgnNFuA94I55cxi1")
         PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(launchOptions, block: nil)

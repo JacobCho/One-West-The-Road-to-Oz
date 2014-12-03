@@ -26,6 +26,7 @@
 		5213D1B61A2D771600BF5098 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5213D1B51A2D771600BF5098 /* CoreGraphics.framework */; };
 		5213D1B81A2D772600BF5098 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5213D1B71A2D772600BF5098 /* CFNetwork.framework */; };
 		5213D1BA1A2D773100BF5098 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5213D1B91A2D773100BF5098 /* AudioToolbox.framework */; };
+		523AB8711A2EC55D005C7A66 /* CenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523AB8701A2EC55D005C7A66 /* CenterViewController.swift */; };
 		52814F201A2D7C8A00835680 /* NavDrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52814F1F1A2D7C8A00835680 /* NavDrawerViewController.swift */; };
 		52814F251A2D829600835680 /* NavDrawerTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52814F241A2D829600835680 /* NavDrawerTableCell.swift */; };
 		52814F271A2D82B100835680 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52814F261A2D82B100835680 /* User.swift */; };
@@ -65,6 +66,7 @@
 		5213D1B51A2D771600BF5098 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		5213D1B71A2D772600BF5098 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		5213D1B91A2D773100BF5098 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		523AB8701A2EC55D005C7A66 /* CenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterViewController.swift; sourceTree = "<group>"; };
 		52814F171A2D7B6800835680 /* One West The Road to Oz-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "One West The Road to Oz-Bridging-Header.h"; sourceTree = "<group>"; };
 		52814F1F1A2D7C8A00835680 /* NavDrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavDrawerViewController.swift; sourceTree = "<group>"; };
 		52814F241A2D829600835680 /* NavDrawerTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavDrawerTableCell.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				5213D1871A2D2B8B00BF5098 /* Main.storyboard */,
+				523AB8701A2EC55D005C7A66 /* CenterViewController.swift */,
 				52814F241A2D829600835680 /* NavDrawerTableCell.swift */,
 			);
 			name = Views;
@@ -357,6 +360,7 @@
 				52814F271A2D82B100835680 /* User.swift in Sources */,
 				52814F251A2D829600835680 /* NavDrawerTableCell.swift in Sources */,
 				5211A64C1A2D92A2005CB6F2 /* ContainerViewController.swift in Sources */,
+				523AB8711A2EC55D005C7A66 /* CenterViewController.swift in Sources */,
 				5213D1821A2D2B8B00BF5098 /* AppDelegate.swift in Sources */,
 				52814F201A2D7C8A00835680 /* NavDrawerViewController.swift in Sources */,
 			);
@@ -434,7 +438,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -470,7 +474,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

@@ -15,22 +15,15 @@ enum SlideOutState {
     case RightPanelExpanded
 }
 
-class ContainerViewController: UIViewController {
+class ContainerViewController: UIViewController, CenterViewControllerDelegate {
     
+    var centerNavigationController : UINavigationController!
+    var centerViewController : CenterViewController!
+   
+    
+
     var navDrawViewController : NavDrawerViewController?
     let centerPanelExpandedOffset : CGFloat = 60
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.navigationController?.didMoveToParentViewController(self)
-    }
-    // MARK: Nav Drawer Functions
-
-    @IBAction func navDrawerBarButtonPressed(sender: UIBarButtonItem) {
-        toggleLeftPanel()
-    }
-    
     var currentState : SlideOutState = .BothCollapsed {
         didSet {
             let didShowShadow = currentState != .BothCollapsed
@@ -38,7 +31,32 @@ class ContainerViewController: UIViewController {
         }
         
     }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        centerViewController = UIStoryboard.centerViewController()
+        centerViewController.delegate = self
+
+        
+        // wrap the centerViewController in a navigation controller, so we can push views to it
+        // and display bar button items in the navigation bar
+        centerNavigationController = UINavigationController(rootViewController: centerViewController)
+        view.addSubview(centerNavigationController.view)
+        addChildViewController(centerNavigationController)
+        
+        centerNavigationController.didMoveToParentViewController(self)
+        
+        
+    }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        
+    }
+    // MARK: Nav Drawer Functions
+
     func toggleLeftPanel() {
         let notAlreadyExpanded = (currentState != .LeftPanelExpanded)
         
@@ -62,6 +80,7 @@ class ContainerViewController: UIViewController {
     func addNavDrawerController(navDrawerController : NavDrawerViewController) {
         view.insertSubview(navDrawerController.view, atIndex: 0)
         
+        
         addChildViewController(navDrawerController)
         navDrawerController.didMoveToParentViewController(self)
     }
@@ -70,7 +89,7 @@ class ContainerViewController: UIViewController {
         if (shouldExpand) {
             currentState = .LeftPanelExpanded
             
-            animateCenterPanelXPosition(targetPosition: CGRectGetWidth(self.navigationController!.view.frame) - centerPanelExpandedOffset)
+            animateCenterPanelXPosition(targetPosition: CGRectGetWidth(self.centerNavigationController.view.frame) - centerPanelExpandedOffset)
         } else {
             animateCenterPanelXPosition(targetPosition: 0) { finished in
                 self.currentState = .BothCollapsed
@@ -85,7 +104,7 @@ class ContainerViewController: UIViewController {
     
     func animateCenterPanelXPosition(#targetPosition: CGFloat, completion: ((Bool) -> Void)! = nil) {
         UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0,options: .CurveEaseInOut, animations: {
-            self.navigationController!.view.frame.origin.x = targetPosition
+            self.centerNavigationController.view.frame.origin.x = targetPosition
             }, completion: completion)
     }
     
@@ -93,9 +112,9 @@ class ContainerViewController: UIViewController {
     
     func showShadowForCenterViewController(shouldShowShadow: Bool) {
         if (shouldShowShadow) {
-            self.navigationController!.view.layer.shadowOpacity = 0.8
+            self.centerNavigationController.view.layer.shadowOpacity = 0.8
         } else {
-            self.navigationController!.view.layer.shadowOpacity = 0.0
+            self.centerNavigationController.view.layer.shadowOpacity = 0.0
         }
     }
 
@@ -106,6 +125,10 @@ private extension UIStoryboard {
     
     class func navDrawerViewController() -> NavDrawerViewController? {
         return mainStoryboard().instantiateViewControllerWithIdentifier("NavDrawerViewController") as? NavDrawerViewController
+    }
+    
+    class func centerViewController() -> CenterViewController? {
+        return mainStoryboard().instantiateViewControllerWithIdentifier("CenterViewController") as? CenterViewController
     }
 
 }
