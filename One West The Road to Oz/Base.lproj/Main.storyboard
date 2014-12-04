@@ -220,7 +220,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="wQe-cT-hIg" kind="embed" id="q2R-co-hYf"/>
+                                    <segue destination="SjQ-RS-q3X" kind="embed" id="GYf-4S-nwH"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -257,27 +257,64 @@
             <point key="canvasLocation" x="2158.5" y="-930"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="J2M-aO-67G">
+        <scene sceneID="pfA-qe-BHd">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="wQe-cT-hIg" sceneMemberID="viewController">
+                <viewController id="gKj-nq-gg7" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="eyZ-3O-HvT"/>
-                        <viewControllerLayoutGuide type="bottom" id="Rh5-Ho-eAK"/>
+                        <viewControllerLayoutGuide type="top" id="88b-Kf-pDq"/>
+                        <viewControllerLayoutGuide type="bottom" id="sc1-Sn-lAB"/>
                     </layoutGuides>
-                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="FAt-Nm-KqD">
-                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <view key="view" contentMode="scaleToFill" id="jw3-rR-pBi">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <toolbarItems/>
+                    <tabBarItem key="tabBarItem" systemItem="recents" id="x6b-pj-KIU"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dWl-H3-Jef" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="54s-qm-qgu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2928" y="-930"/>
+            <point key="canvasLocation" x="3856.5" y="-585"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="f0O-Ad-EIj">
+            <objects>
+                <viewController id="ox8-Th-Tii" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fqx-P2-3rw"/>
+                        <viewControllerLayoutGuide type="bottom" id="C2K-jv-Guo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KNc-eA-31k">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" selectedImage="WorkoutIcon" systemItem="favorites" id="twi-XE-ohm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ydj-Zm-jFJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3858" y="-1247"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="unD-cR-DMf">
+            <objects>
+                <tabBarController id="SjQ-RS-q3X" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="UYs-8w-a0h">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ox8-Th-Tii" kind="relationship" relationship="viewControllers" id="jsV-Xv-0mp"/>
+                        <segue destination="gKj-nq-gg7" kind="relationship" relationship="viewControllers" id="H9k-cg-0eH"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7zm-Sr-S43" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2931" y="-917"/>
         </scene>
     </scenes>
     <resources>
         <image name="PersonPlaceholder" width="277" height="277"/>
+        <image name="WorkoutIcon" width="250" height="250"/>
         <image name="onewestbanner" width="480" height="270"/>
     </resources>
 </document>

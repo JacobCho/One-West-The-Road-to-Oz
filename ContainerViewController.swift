@@ -15,11 +15,11 @@ enum SlideOutState {
     case RightPanelExpanded
 }
 
-class ContainerViewController: UIViewController, CenterViewControllerDelegate{
+class ContainerViewController: UIViewController, CenterViewControllerDelegate, UIGestureRecognizerDelegate {
     
     var centerNavigationController : UINavigationController!
     var centerViewController : CenterViewController!
-    var navDrawViewController : NavDrawerViewController?
+    var navDrawerViewController : NavDrawerViewController?
     let centerPanelExpandedOffset : CGFloat = 60
     var currentState : SlideOutState = .BothCollapsed {
         didSet {
@@ -32,6 +32,9 @@ class ContainerViewController: UIViewController, CenterViewControllerDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavController()
+        
+        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: "handlePanGesture:")
+        centerNavigationController.view.addGestureRecognizer(panGestureRecognizer)
         
     }
     
@@ -68,11 +71,11 @@ class ContainerViewController: UIViewController, CenterViewControllerDelegate{
     
     func addNavDrawerViewController() {
         
-        if (navDrawViewController == nil) {
+        if (navDrawerViewController == nil) {
             
-            navDrawViewController = UIStoryboard.navDrawerViewController()
+            navDrawerViewController = UIStoryboard.navDrawerViewController()
             
-            addNavDrawerController(navDrawViewController!)
+            addNavDrawerController(navDrawerViewController!)
         }
     }
     
@@ -93,8 +96,8 @@ class ContainerViewController: UIViewController, CenterViewControllerDelegate{
             animateCenterPanelXPosition(targetPosition: 0) { finished in
                 self.currentState = .BothCollapsed
                 
-                self.navDrawViewController!.view.removeFromSuperview()
-                self.navDrawViewController = nil
+                self.navDrawerViewController!.view.removeFromSuperview()
+                self.navDrawerViewController = nil
                 
             }
             
@@ -114,6 +117,33 @@ class ContainerViewController: UIViewController, CenterViewControllerDelegate{
             self.centerNavigationController.view.layer.shadowOpacity = 0.8
         } else {
             self.centerNavigationController.view.layer.shadowOpacity = 0.0
+        }
+    }
+    
+    // MARK: Gesture recognizer
+    
+    func handlePanGesture(recognizer: UIPanGestureRecognizer) {
+        
+        let gestureIsDraggingFromLeftToRight = (recognizer.velocityInView(view).x > 0)
+        let gestureIsDraggingFromRightToLeft = (recognizer.velocityInView(view).x < 0)
+        
+        switch (recognizer.state) {
+        case .Began:
+            if (currentState == .BothCollapsed) {
+                if (gestureIsDraggingFromLeftToRight) {
+                    addNavDrawerViewController()
+                    animateLeftPanel(shouldExpand: true)
+                }
+                showShadowForCenterViewController(true)
+            } else {
+                
+                if (gestureIsDraggingFromRightToLeft) {
+                     animateLeftPanel(shouldExpand: false)
+                }
+            }
+            
+        default:
+            break
         }
     }
 }
