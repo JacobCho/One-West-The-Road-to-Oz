@@ -31,7 +31,10 @@ class NavDrawerViewController: UIViewController, UITableViewDataSource, UITableV
     func setupIcons() {
         
         var workoutIcon : UIImage = UIImage(named: "WorkoutIcon")!
-        iconArray = [workoutIcon, workoutIcon, workoutIcon, workoutIcon]
+        var infoIcon : UIImage = UIImage(named: "InfoIcon")!
+        var TTIcon : UIImage = UIImage(named: "TTIcon")!
+        var settingsIcon : UIImage = UIImage(named: "SettingsIcon")!
+        iconArray = [workoutIcon, infoIcon, TTIcon, settingsIcon]
         
     }
     
@@ -50,7 +53,7 @@ class NavDrawerViewController: UIViewController, UITableViewDataSource, UITableV
         var cell : NavDrawerTableCell = tableView.dequeueReusableCellWithIdentifier("navDrawerCell", forIndexPath: indexPath) as NavDrawerTableCell
         
         let navItem = navArray[indexPath.row]
-        let icon = UIImage(named:"WorkoutIcon")
+        let icon = iconArray![indexPath.row]
         cell.navLabel.text = navItem
         cell.iconImageView.image = icon
         

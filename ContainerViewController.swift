@@ -38,15 +38,12 @@ class ContainerViewController: UIViewController, CenterViewControllerDelegate {
         centerViewController = UIStoryboard.centerViewController()
         centerViewController.delegate = self
 
-        
-        // wrap the centerViewController in a navigation controller, so we can push views to it
-        // and display bar button items in the navigation bar
         centerNavigationController = UINavigationController(rootViewController: centerViewController)
         view.addSubview(centerNavigationController.view)
         addChildViewController(centerNavigationController)
         
         centerNavigationController.didMoveToParentViewController(self)
-        
+        centerNavigationController.navigationBar.barTintColor = UIColor(red: 244.0/255.0, green: 67.0/255.0, blue: 54.0/255.0, alpha: 1)
         
     }
     

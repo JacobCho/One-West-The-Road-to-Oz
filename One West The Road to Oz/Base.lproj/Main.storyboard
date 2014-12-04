@@ -54,23 +54,6 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oiH-LB-R52" id="VPx-Yl-Fm5">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CkG-Eb-JFa">
-                                                    <rect key="frame" x="33" y="1" width="149" height="89"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="72" id="LJy-H2-tcW"/>
-                                                    </constraints>
-                                                    <variation key="default">
-                                                        <mask key="constraints">
-                                                            <exclude reference="LJy-H2-tcW"/>
-                                                        </mask>
-                                                    </variation>
-                                                    <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                                        <rect key="frame" x="36" y="2" width="72" height="64"/>
-                                                        <mask key="constraints">
-                                                            <include reference="LJy-H2-tcW"/>
-                                                        </mask>
-                                                    </variation>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUx-xa-Zvx">
                                                     <rect key="frame" x="190" y="8" width="320" height="74"/>
                                                     <constraints>
@@ -91,12 +74,37 @@
                                                         </mask>
                                                     </variation>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CkG-Eb-JFa">
+                                                    <rect key="frame" x="33" y="1" width="149" height="89"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="72" id="LJy-H2-tcW">
+                                                            <variation key="widthClass=compact" constant="50"/>
+                                                        </constraint>
+                                                    </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="LJy-H2-tcW"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                                        <rect key="frame" x="49" y="9" width="50" height="50"/>
+                                                        <mask key="constraints">
+                                                            <include reference="LJy-H2-tcW"/>
+                                                        </mask>
+                                                    </variation>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="CkG-Eb-JFa" secondAttribute="bottom" constant="-7" id="26t-VE-8QH"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="CkG-Eb-JFa" secondAttribute="bottom" constant="-7" id="26t-VE-8QH">
+                                                    <variation key="widthClass=compact" constant="0.0"/>
+                                                </constraint>
                                                 <constraint firstAttribute="centerY" secondItem="qUx-xa-Zvx" secondAttribute="centerY" id="5aS-iI-Gbv"/>
-                                                <constraint firstItem="qUx-xa-Zvx" firstAttribute="leading" secondItem="CkG-Eb-JFa" secondAttribute="trailing" constant="13" id="D3z-GW-2ha"/>
-                                                <constraint firstItem="CkG-Eb-JFa" firstAttribute="top" secondItem="VPx-Yl-Fm5" secondAttribute="topMargin" constant="-6" id="UMe-Ia-oqE"/>
+                                                <constraint firstItem="qUx-xa-Zvx" firstAttribute="leading" secondItem="CkG-Eb-JFa" secondAttribute="trailing" constant="13" id="D3z-GW-2ha">
+                                                    <variation key="widthClass=compact" constant="22"/>
+                                                </constraint>
+                                                <constraint firstItem="CkG-Eb-JFa" firstAttribute="top" secondItem="VPx-Yl-Fm5" secondAttribute="topMargin" constant="-6" id="UMe-Ia-oqE">
+                                                    <variation key="widthClass=compact" constant="1"/>
+                                                </constraint>
                                                 <constraint firstAttribute="centerX" secondItem="qUx-xa-Zvx" secondAttribute="centerX" id="wH1-Kx-ro2"/>
                                                 <constraint firstItem="CkG-Eb-JFa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="VPx-Yl-Fm5" secondAttribute="leadingMargin" constant="28" id="x3c-hQ-3Pr">
                                                     <variation key="widthClass=compact" constant="10"/>
@@ -259,7 +267,7 @@
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="FAt-Nm-KqD">
                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.1630401172" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
                 </viewController>
