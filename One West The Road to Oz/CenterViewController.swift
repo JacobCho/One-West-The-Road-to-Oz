@@ -22,7 +22,7 @@ class CenterViewController: UIViewController {
     @IBOutlet weak var containerView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        var navBarButton = UIBarButtonItem(barButtonSystemItem: .Reply, target: self, action: "navDrawerButtonPressed:")
+        var navBarButton = UIBarButtonItem(image: UIImage(named: "HamburgerIcon"), style: UIBarButtonItemStyle.Plain, target: self, action: "navDrawerButtonPressed:")
         navigationItem.leftBarButtonItem = navBarButton
        
     }

@@ -15,13 +15,10 @@ enum SlideOutState {
     case RightPanelExpanded
 }
 
-class ContainerViewController: UIViewController, CenterViewControllerDelegate {
+class ContainerViewController: UIViewController, CenterViewControllerDelegate{
     
     var centerNavigationController : UINavigationController!
     var centerViewController : CenterViewController!
-   
-    
-
     var navDrawViewController : NavDrawerViewController?
     let centerPanelExpandedOffset : CGFloat = 60
     var currentState : SlideOutState = .BothCollapsed {
@@ -34,16 +31,7 @@ class ContainerViewController: UIViewController, CenterViewControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        centerViewController = UIStoryboard.centerViewController()
-        centerViewController.delegate = self
-
-        centerNavigationController = UINavigationController(rootViewController: centerViewController)
-        view.addSubview(centerNavigationController.view)
-        addChildViewController(centerNavigationController)
-        
-        centerNavigationController.didMoveToParentViewController(self)
-        centerNavigationController.navigationBar.barTintColor = UIColor(red: 244.0/255.0, green: 67.0/255.0, blue: 54.0/255.0, alpha: 1)
+        setupNavController()
         
     }
     
@@ -52,7 +40,21 @@ class ContainerViewController: UIViewController, CenterViewControllerDelegate {
         
         
     }
+    
+    
     // MARK: Nav Drawer Functions
+    func setupNavController() {
+        centerViewController = UIStoryboard.centerViewController()
+        centerViewController.delegate = self
+        
+        centerNavigationController = UINavigationController(rootViewController: centerViewController)
+        view.addSubview(centerNavigationController.view)
+        addChildViewController(centerNavigationController)
+        
+        centerNavigationController.didMoveToParentViewController(self)
+        centerNavigationController.navigationBar.barTintColor = UIColor(red: 244.0/255.0, green: 67.0/255.0, blue: 54.0/255.0, alpha: 1)
+        centerNavigationController.navigationBar.tintColor = UIColor.whiteColor()
+    }
 
     func toggleLeftPanel() {
         let notAlreadyExpanded = (currentState != .LeftPanelExpanded)
@@ -114,7 +116,6 @@ class ContainerViewController: UIViewController, CenterViewControllerDelegate {
             self.centerNavigationController.view.layer.shadowOpacity = 0.0
         }
     }
-
 }
 
 private extension UIStoryboard {
