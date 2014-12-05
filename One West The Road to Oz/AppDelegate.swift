@@ -30,6 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Register Parse subclasses
         User.registerSubclass()
+        GymWorkouts.registerSubclass()
         
         return true
     }

@@ -26,10 +26,16 @@
 		5213D1B61A2D771600BF5098 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5213D1B51A2D771600BF5098 /* CoreGraphics.framework */; };
 		5213D1B81A2D772600BF5098 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5213D1B71A2D772600BF5098 /* CFNetwork.framework */; };
 		5213D1BA1A2D773100BF5098 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5213D1B91A2D773100BF5098 /* AudioToolbox.framework */; };
+		52296D8C1A3130E40078919E /* WorkoutsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52296D8B1A3130E40078919E /* WorkoutsTableViewCell.swift */; };
 		523AB8711A2EC55D005C7A66 /* CenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523AB8701A2EC55D005C7A66 /* CenterViewController.swift */; };
 		52814F201A2D7C8A00835680 /* NavDrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52814F1F1A2D7C8A00835680 /* NavDrawerViewController.swift */; };
 		52814F251A2D829600835680 /* NavDrawerTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52814F241A2D829600835680 /* NavDrawerTableCell.swift */; };
 		52814F271A2D82B100835680 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52814F261A2D82B100835680 /* User.swift */; };
+		52FC39A91A30F4F900B56BE9 /* GymWorkouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FC39A81A30F4F900B56BE9 /* GymWorkouts.swift */; };
+		52FC39AB1A30F90800B56BE9 /* OCWorkouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FC39AA1A30F90800B56BE9 /* OCWorkouts.swift */; };
+		52FC39AD1A30FC1E00B56BE9 /* GymViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FC39AC1A30FC1E00B56BE9 /* GymViewController.swift */; };
+		52FC39AF1A30FC4000B56BE9 /* OCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FC39AE1A30FC4000B56BE9 /* OCViewController.swift */; };
+		52FC39B11A30FCA100B56BE9 /* PointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FC39B01A30FCA100B56BE9 /* PointsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,11 +72,17 @@
 		5213D1B51A2D771600BF5098 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		5213D1B71A2D772600BF5098 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		5213D1B91A2D773100BF5098 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		52296D8B1A3130E40078919E /* WorkoutsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutsTableViewCell.swift; sourceTree = "<group>"; };
 		523AB8701A2EC55D005C7A66 /* CenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterViewController.swift; sourceTree = "<group>"; };
 		52814F171A2D7B6800835680 /* One West The Road to Oz-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "One West The Road to Oz-Bridging-Header.h"; sourceTree = "<group>"; };
 		52814F1F1A2D7C8A00835680 /* NavDrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavDrawerViewController.swift; sourceTree = "<group>"; };
 		52814F241A2D829600835680 /* NavDrawerTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavDrawerTableCell.swift; sourceTree = "<group>"; };
 		52814F261A2D82B100835680 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		52FC39A81A30F4F900B56BE9 /* GymWorkouts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GymWorkouts.swift; sourceTree = "<group>"; };
+		52FC39AA1A30F90800B56BE9 /* OCWorkouts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCWorkouts.swift; sourceTree = "<group>"; };
+		52FC39AC1A30FC1E00B56BE9 /* GymViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GymViewController.swift; sourceTree = "<group>"; };
+		52FC39AE1A30FC4000B56BE9 /* OCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCViewController.swift; sourceTree = "<group>"; };
+		52FC39B01A30FCA100B56BE9 /* PointsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointsViewController.swift; sourceTree = "<group>"; };
 		E2496CFBCBECEE7E2DB15688 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F6E89D6C054EFA2E5FFD5C3B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -199,6 +211,8 @@
 			isa = PBXGroup;
 			children = (
 				52814F261A2D82B100835680 /* User.swift */,
+				52FC39A81A30F4F900B56BE9 /* GymWorkouts.swift */,
+				52FC39AA1A30F90800B56BE9 /* OCWorkouts.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -207,8 +221,8 @@
 			isa = PBXGroup;
 			children = (
 				5213D1871A2D2B8B00BF5098 /* Main.storyboard */,
-				523AB8701A2EC55D005C7A66 /* CenterViewController.swift */,
 				52814F241A2D829600835680 /* NavDrawerTableCell.swift */,
+				52296D8B1A3130E40078919E /* WorkoutsTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -216,6 +230,10 @@
 		52814F231A2D7CA000835680 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				52FC39B01A30FCA100B56BE9 /* PointsViewController.swift */,
+				52FC39AE1A30FC4000B56BE9 /* OCViewController.swift */,
+				52FC39AC1A30FC1E00B56BE9 /* GymViewController.swift */,
+				523AB8701A2EC55D005C7A66 /* CenterViewController.swift */,
 				5211A64B1A2D92A2005CB6F2 /* ContainerViewController.swift */,
 				52814F1F1A2D7C8A00835680 /* NavDrawerViewController.swift */,
 			);
@@ -357,12 +375,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52FC39A91A30F4F900B56BE9 /* GymWorkouts.swift in Sources */,
+				52FC39AD1A30FC1E00B56BE9 /* GymViewController.swift in Sources */,
 				52814F271A2D82B100835680 /* User.swift in Sources */,
 				52814F251A2D829600835680 /* NavDrawerTableCell.swift in Sources */,
+				52FC39AB1A30F90800B56BE9 /* OCWorkouts.swift in Sources */,
+				52FC39B11A30FCA100B56BE9 /* PointsViewController.swift in Sources */,
 				5211A64C1A2D92A2005CB6F2 /* ContainerViewController.swift in Sources */,
 				523AB8711A2EC55D005C7A66 /* CenterViewController.swift in Sources */,
 				5213D1821A2D2B8B00BF5098 /* AppDelegate.swift in Sources */,
+				52FC39AF1A30FC4000B56BE9 /* OCViewController.swift in Sources */,
 				52814F201A2D7C8A00835680 /* NavDrawerViewController.swift in Sources */,
+				52296D8C1A3130E40078919E /* WorkoutsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
