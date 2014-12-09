@@ -27,6 +27,7 @@
 		5213D1B81A2D772600BF5098 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5213D1B71A2D772600BF5098 /* CFNetwork.framework */; };
 		5213D1BA1A2D773100BF5098 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5213D1B91A2D773100BF5098 /* AudioToolbox.framework */; };
 		52296D8C1A3130E40078919E /* WorkoutsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52296D8B1A3130E40078919E /* WorkoutsTableViewCell.swift */; };
+		52296D921A36D8560078919E /* WorkoutsTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52296D911A36D8560078919E /* WorkoutsTabBarController.swift */; };
 		523AB8711A2EC55D005C7A66 /* CenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523AB8701A2EC55D005C7A66 /* CenterViewController.swift */; };
 		52814F201A2D7C8A00835680 /* NavDrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52814F1F1A2D7C8A00835680 /* NavDrawerViewController.swift */; };
 		52814F251A2D829600835680 /* NavDrawerTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52814F241A2D829600835680 /* NavDrawerTableCell.swift */; };
@@ -73,6 +74,7 @@
 		5213D1B71A2D772600BF5098 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		5213D1B91A2D773100BF5098 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		52296D8B1A3130E40078919E /* WorkoutsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutsTableViewCell.swift; sourceTree = "<group>"; };
+		52296D911A36D8560078919E /* WorkoutsTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutsTabBarController.swift; sourceTree = "<group>"; };
 		523AB8701A2EC55D005C7A66 /* CenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterViewController.swift; sourceTree = "<group>"; };
 		52814F171A2D7B6800835680 /* One West The Road to Oz-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "One West The Road to Oz-Bridging-Header.h"; sourceTree = "<group>"; };
 		52814F1F1A2D7C8A00835680 /* NavDrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavDrawerViewController.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 			children = (
 				52FC39B01A30FCA100B56BE9 /* PointsViewController.swift */,
 				52FC39AE1A30FC4000B56BE9 /* OCViewController.swift */,
+				52296D911A36D8560078919E /* WorkoutsTabBarController.swift */,
 				52FC39AC1A30FC1E00B56BE9 /* GymViewController.swift */,
 				523AB8701A2EC55D005C7A66 /* CenterViewController.swift */,
 				5211A64B1A2D92A2005CB6F2 /* ContainerViewController.swift */,
@@ -375,6 +378,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52296D921A36D8560078919E /* WorkoutsTabBarController.swift in Sources */,
 				52FC39A91A30F4F900B56BE9 /* GymWorkouts.swift in Sources */,
 				52FC39AD1A30FC1E00B56BE9 /* GymViewController.swift in Sources */,
 				52814F271A2D82B100835680 /* User.swift in Sources */,
@@ -520,6 +524,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "One West The Road to Oz/One West The Road to Oz-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -537,6 +542,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "One West The Road to Oz/One West The Road to Oz-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
