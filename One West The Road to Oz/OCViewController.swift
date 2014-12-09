@@ -21,7 +21,7 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var tapGesture = UITapGestureRecognizer(target: self, action: "completeWorkout")
+        var tapGesture = UITapGestureRecognizer(target: self, action: "workoutAlert:")
         tapGesture.numberOfTouchesRequired = 1
         tapGesture.numberOfTapsRequired = 2
         self.tableView.addGestureRecognizer(tapGesture)
@@ -93,8 +93,8 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
     
     // Mark: Table View Delegate
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+    func tableView(tableView: UITableView, DidSelectRowAtIndexPath indexPath: NSIndexPath) {
+       println("Row Selected")
     }
     
     func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -109,9 +109,23 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
         return dateFormatter.stringFromDate(thisWeek.dateByAddingTimeInterval(60*60*24*1))
     }
     
-    func completeWorkout() {
+    func workoutAlert(gesture : UITapGestureRecognizer) {
+        
+        var location = gesture.locationInView(self.tableView)
+        var indexPath = self.tableView.indexPathForRowAtPoint(location)
+
+        
         var completeAlert = SCLAlertView()
+        completeAlert.addButton("Hell Yeah", actionBlock: { () -> Void in
+            self.completeWorkout(indexPath!)
+        })
         completeAlert.showSuccess(self, title: "Workout Completed", subTitle: "Did you complete this workout?", closeButtonTitle: "Ok", duration: 0)
+        
+    }
+    
+    func completeWorkout(indexPath: NSIndexPath) {
+        var cell : WorkoutsTableViewCell = self.tableView.cellForRowAtIndexPath(indexPath) as WorkoutsTableViewCell
+        cell.completedImageView.image = UIImage(named: "completedIcon")
     }
 
 }
