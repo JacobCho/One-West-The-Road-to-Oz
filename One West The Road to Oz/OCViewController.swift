@@ -12,32 +12,41 @@ import Parse
 
 class OCViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var ocWorkout : OCWorkouts?
     var workoutsArray = [OCWorkouts]()
 
-
+    @IBOutlet weak var weekStartingLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        queryForWorkouts()
 
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        queryForWorkouts()
     }
     
     func queryForWorkouts() {
         let todaysDate = NSDate(timeIntervalSinceNow: 0)
         let nextWeek = NSDate(timeInterval: 604800, sinceDate: todaysDate)
         let lastWeek = NSDate(timeInterval: -604800, sinceDate: todaysDate)
-        
+        self.workoutsArray.removeAll()
         var query = OCWorkouts.query()
         query.whereKey("weekStarting", lessThan: todaysDate)
         query.whereKey("weekStarting", greaterThan: lastWeek)
+        query.orderByAscending("day")
         query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) -> Void in
             if (error == nil) {
                 for object in objects {
                     self.workoutsArray.append(object as OCWorkouts)
+
                 }
-                println(self.workoutsArray)
+                self.tableView.reloadData()
             }
+            
         }
+        
         
     }
 
@@ -66,7 +75,12 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
         
         var cell : WorkoutsTableViewCell = tableView.dequeueReusableCellWithIdentifier("OCWorkoutCell", forIndexPath: indexPath) as WorkoutsTableViewCell
         
-
+        var workout = workoutsArray[indexPath.row]
+        cell.backgroundColor = UIColor.clearColor()
+        cell.layer.shadowOpacity = 0.5
+        cell.layer.shadowOffset = CGSizeMake(0, 5.0)
+        cell.dayLabel.text = workout.day + ":"
+        cell.workoutLabel.text = workout.workout
         
         return cell
         
@@ -76,6 +90,10 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
+    }
+    
+    func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return false
     }
 
 }

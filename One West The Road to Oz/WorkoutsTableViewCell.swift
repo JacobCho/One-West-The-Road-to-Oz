@@ -10,6 +10,10 @@ import UIKit
 
 class WorkoutsTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var dayLabel: UILabel!
+    @IBOutlet weak var workoutLabel: UILabel!
+    @IBOutlet weak var completedImageView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
