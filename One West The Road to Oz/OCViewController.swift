@@ -10,15 +10,21 @@ import UIKit
 import Parse
 
 
-class OCViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class OCViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate {
     
     var workoutsArray = [OCWorkouts]()
+    var thisWeek : OCWorkouts?
 
     @IBOutlet weak var weekStartingLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var tapGesture = UITapGestureRecognizer(target: self, action: "completeWorkout")
+        tapGesture.numberOfTouchesRequired = 1
+        tapGesture.numberOfTapsRequired = 2
+        self.tableView.addGestureRecognizer(tapGesture)
 
     }
     
@@ -40,8 +46,10 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
             if (error == nil) {
                 for object in objects {
                     self.workoutsArray.append(object as OCWorkouts)
-
                 }
+                self.thisWeek = objects[0] as? OCWorkouts
+                var thisWeek = self.setWeekFromDate(self.thisWeek!.weekStarting)
+                self.weekStartingLabel.text = "Week Starting: " + thisWeek
                 self.tableView.reloadData()
             }
             
@@ -49,7 +57,7 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
         
         
     }
-
+    
 
     /*
     // MARK: - Navigation
@@ -76,9 +84,6 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
         var cell : WorkoutsTableViewCell = tableView.dequeueReusableCellWithIdentifier("OCWorkoutCell", forIndexPath: indexPath) as WorkoutsTableViewCell
         
         var workout = workoutsArray[indexPath.row]
-        cell.backgroundColor = UIColor.clearColor()
-        cell.layer.shadowOpacity = 0.5
-        cell.layer.shadowOffset = CGSizeMake(0, 5.0)
         cell.dayLabel.text = workout.day + ":"
         cell.workoutLabel.text = workout.workout
         
@@ -94,6 +99,19 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
     
     func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return false
+    }
+    
+    // Mark: Helper Methods
+    func setWeekFromDate(thisWeek : NSDate) -> String {
+        var dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "MMM dd"
+        
+        return dateFormatter.stringFromDate(thisWeek.dateByAddingTimeInterval(60*60*24*1))
+    }
+    
+    func completeWorkout() {
+        var completeAlert = SCLAlertView()
+        completeAlert.showSuccess(self, title: "Workout Completed", subTitle: "Did you complete this workout?", closeButtonTitle: "Ok", duration: 0)
     }
 
 }

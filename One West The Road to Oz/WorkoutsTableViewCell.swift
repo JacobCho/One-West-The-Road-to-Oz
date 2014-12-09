@@ -16,7 +16,9 @@ class WorkoutsTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.backgroundColor = UIColor.clearColor()
+        self.layer.shadowOpacity = 0.5
+        self.layer.shadowOffset = CGSizeMake(0, 5.0)
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
