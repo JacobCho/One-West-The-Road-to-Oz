@@ -29,6 +29,7 @@
 		52296D8C1A3130E40078919E /* WorkoutsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52296D8B1A3130E40078919E /* WorkoutsTableViewCell.swift */; };
 		52296D921A36D8560078919E /* WorkoutsTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52296D911A36D8560078919E /* WorkoutsTabBarController.swift */; };
 		523AB8711A2EC55D005C7A66 /* CenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523AB8701A2EC55D005C7A66 /* CenterViewController.swift */; };
+		527483141A37BEB500C51315 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527483131A37BEB500C51315 /* LoginViewController.swift */; };
 		52814F201A2D7C8A00835680 /* NavDrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52814F1F1A2D7C8A00835680 /* NavDrawerViewController.swift */; };
 		52814F251A2D829600835680 /* NavDrawerTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52814F241A2D829600835680 /* NavDrawerTableCell.swift */; };
 		52814F271A2D82B100835680 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52814F261A2D82B100835680 /* User.swift */; };
@@ -76,6 +77,7 @@
 		52296D8B1A3130E40078919E /* WorkoutsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutsTableViewCell.swift; sourceTree = "<group>"; };
 		52296D911A36D8560078919E /* WorkoutsTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutsTabBarController.swift; sourceTree = "<group>"; };
 		523AB8701A2EC55D005C7A66 /* CenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterViewController.swift; sourceTree = "<group>"; };
+		527483131A37BEB500C51315 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		52814F171A2D7B6800835680 /* One West The Road to Oz-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "One West The Road to Oz-Bridging-Header.h"; sourceTree = "<group>"; };
 		52814F1F1A2D7C8A00835680 /* NavDrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavDrawerViewController.swift; sourceTree = "<group>"; };
 		52814F241A2D829600835680 /* NavDrawerTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavDrawerTableCell.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 		52814F231A2D7CA000835680 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				527483131A37BEB500C51315 /* LoginViewController.swift */,
 				52FC39B01A30FCA100B56BE9 /* PointsViewController.swift */,
 				52FC39AE1A30FC4000B56BE9 /* OCViewController.swift */,
 				52296D911A36D8560078919E /* WorkoutsTabBarController.swift */,
@@ -378,6 +381,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				527483141A37BEB500C51315 /* LoginViewController.swift in Sources */,
 				52296D921A36D8560078919E /* WorkoutsTabBarController.swift in Sources */,
 				52FC39A91A30F4F900B56BE9 /* GymWorkouts.swift in Sources */,
 				52FC39AD1A30FC1E00B56BE9 /* GymViewController.swift in Sources */,
