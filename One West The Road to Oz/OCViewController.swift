@@ -12,6 +12,8 @@ import Parse
 
 class OCViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate {
     
+    let currentUser = User.currentUser()
+    
     var workoutsArray = [OCWorkouts]()
     var thisWeek : OCWorkouts?
 
@@ -34,13 +36,10 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
     }
     
     func queryForWorkouts() {
-        let todaysDate = NSDate(timeIntervalSinceNow: 0)
-        let nextWeek = NSDate(timeInterval: 604800, sinceDate: todaysDate)
-        let lastWeek = NSDate(timeInterval: -604800, sinceDate: todaysDate)
         self.workoutsArray.removeAll()
         var query = OCWorkouts.query()
-        query.whereKey("weekStarting", lessThan: todaysDate)
-        query.whereKey("weekStarting", greaterThan: lastWeek)
+        query.whereKey("weekStarting", lessThan: Constants.todaysDate)
+        query.whereKey("weekStarting", greaterThan: Constants.lastWeek)
         query.orderByAscending("day")
         query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) -> Void in
             if (error == nil) {
@@ -119,13 +118,21 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
         completeAlert.addButton("Hell Yeah", actionBlock: { () -> Void in
             self.completeWorkout(indexPath!)
         })
-        completeAlert.showSuccess(self, title: "Workout Completed", subTitle: "Did you complete this workout?", closeButtonTitle: "Ok", duration: 0)
+        completeAlert.showCustom(self, image: UIImage(named: "completedIcon"), color: UIColor(red: 56.0/255.0, green: 142.0/255.0, blue: 60.0/255.0, alpha: 1), title: "Workout Completed", subTitle: "Did you complete this workout?", closeButtonTitle: "Nope", duration: 0)
         
     }
     
     func completeWorkout(indexPath: NSIndexPath) {
         var cell : WorkoutsTableViewCell = self.tableView.cellForRowAtIndexPath(indexPath) as WorkoutsTableViewCell
         cell.completedImageView.image = UIImage(named: "completedIcon")
+        // add OC points to current user and save
+        currentUser.ocPoints += 100
+        currentUser.saveInBackgroundWithTarget(nil, selector: nil)
+        // get current workout and add relation to currentuser
+        var workout = workoutsArray[indexPath.row]
+        var relation = workout.relationForKey("whoCompleted")
+        relation.addObject(currentUser)
+        workout.saveInBackgroundWithTarget(nil, selector: nil)
     }
 
 }

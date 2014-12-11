@@ -12,7 +12,7 @@ class WorkoutsTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tabBar.tintColor = UIColor(red: 244.0/255.0, green: 67.0/255.0, blue: 54.0/255.0, alpha: 1)
+        self.tabBar.tintColor = Constants.flatRed
     }
 
 }
