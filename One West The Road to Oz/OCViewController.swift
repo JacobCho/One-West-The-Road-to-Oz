@@ -137,20 +137,28 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
     }
     
     func completeWorkout(indexPath: NSIndexPath) {
-        self.addCompletedImage(indexPath)
-        // add OC points to current user and save
-        currentUser.ocPoints += 100
-        currentUser.saveInBackgroundWithTarget(nil, selector: nil)
-        // get current workout and add relation to currentuser
-        var workout = workoutsArray[indexPath.row]
-        var relation = workout.relationForKey("whoCompleted")
-        relation.addObject(currentUser)
-        workout.saveInBackgroundWithTarget(nil, selector: nil)
+        var cell : WorkoutsTableViewCell = self.tableView.cellForRowAtIndexPath(indexPath) as WorkoutsTableViewCell
+        if (!cell.workoutCompleted) {
+            self.addCompletedImage(indexPath)
+            // add OC points to current user and save
+            currentUser.ocPoints += 100
+            currentUser.saveInBackgroundWithTarget(nil, selector: nil)
+            // get current workout and add relation to currentuser
+            var workout = workoutsArray[indexPath.row]
+            var relation = workout.relationForKey("whoCompleted")
+            relation.addObject(currentUser)
+            workout.saveInBackgroundWithTarget(nil, selector: nil)
+        }
+        else {
+            var errorAlert = SCLAlertView()
+            errorAlert.showError(self, title: "Already Completed", subTitle: "You can't completed the same workout twice", closeButtonTitle: "Ok", duration: 0)
+        }
     }
     
     func addCompletedImage(indexPath: NSIndexPath) {
         var cell : WorkoutsTableViewCell = self.tableView.cellForRowAtIndexPath(indexPath) as WorkoutsTableViewCell
         cell.completedImageView.image = UIImage(named: "completedIcon")
+        cell.workoutCompleted = true
     }
 
 }
