@@ -57,16 +57,28 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
         
     }
     
+    func checkForCompletion(workout : OCWorkouts, indexPath : NSIndexPath) {
 
-    /*
-    // MARK: - Navigation
+        var relation = workout.relationForKey("whoCompleted")
+        var query = relation.query()
+        query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) -> Void in
+            if (error == nil) {
+                for object in objects {
+                    if object.username == self.currentUser.username {
+                        self.addCompletedImage(indexPath)
+                    }
+                }
+                
+            } else {
+                println(error)
+            }
+            
+        }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+
+        
     }
-    */
+
     
     // MARK: Table View Data Source
     
@@ -83,6 +95,8 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
         var cell : WorkoutsTableViewCell = tableView.dequeueReusableCellWithIdentifier("OCWorkoutCell", forIndexPath: indexPath) as WorkoutsTableViewCell
         
         var workout = workoutsArray[indexPath.row]
+        self.checkForCompletion(workout, indexPath: indexPath)
+        
         cell.dayLabel.text = workout.day + ":"
         cell.workoutLabel.text = workout.workout
         
@@ -123,8 +137,7 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
     }
     
     func completeWorkout(indexPath: NSIndexPath) {
-        var cell : WorkoutsTableViewCell = self.tableView.cellForRowAtIndexPath(indexPath) as WorkoutsTableViewCell
-        cell.completedImageView.image = UIImage(named: "completedIcon")
+        self.addCompletedImage(indexPath)
         // add OC points to current user and save
         currentUser.ocPoints += 100
         currentUser.saveInBackgroundWithTarget(nil, selector: nil)
@@ -133,6 +146,11 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
         var relation = workout.relationForKey("whoCompleted")
         relation.addObject(currentUser)
         workout.saveInBackgroundWithTarget(nil, selector: nil)
+    }
+    
+    func addCompletedImage(indexPath: NSIndexPath) {
+        var cell : WorkoutsTableViewCell = self.tableView.cellForRowAtIndexPath(indexPath) as WorkoutsTableViewCell
+        cell.completedImageView.image = UIImage(named: "completedIcon")
     }
 
 }
