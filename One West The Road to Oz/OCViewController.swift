@@ -19,6 +19,7 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
 
     @IBOutlet weak var weekStartingLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var pointsLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,7 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         queryForWorkouts()
+        setupPointsLabel()
     }
     
     func queryForWorkouts() {
@@ -54,7 +56,10 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
             
         }
         
-        
+    }
+    
+    func setupPointsLabel() {
+        self.pointsLabel.text = "Points: " + String(currentUser.ocPoints)
     }
     
     func checkForCompletion(workout : OCWorkouts, indexPath : NSIndexPath) {
@@ -75,8 +80,6 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
             
         }
 
-
-        
     }
 
     
@@ -151,7 +154,7 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
         }
         else {
             var errorAlert = SCLAlertView()
-            errorAlert.showError(self, title: "Already Completed", subTitle: "You can't completed the same workout twice", closeButtonTitle: "Ok", duration: 0)
+            errorAlert.showError(self, title: "Already Completed", subTitle: "You can't complete the same workout twice", closeButtonTitle: "Ok", duration: 0)
         }
     }
     
