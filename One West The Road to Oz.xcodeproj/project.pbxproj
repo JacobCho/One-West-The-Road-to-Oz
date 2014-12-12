@@ -84,6 +84,7 @@
 		52814F1F1A2D7C8A00835680 /* NavDrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavDrawerViewController.swift; sourceTree = "<group>"; };
 		52814F241A2D829600835680 /* NavDrawerTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavDrawerTableCell.swift; sourceTree = "<group>"; };
 		52814F261A2D82B100835680 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		52FAE9E21A3A565C00427DA1 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = "../parse-library-1.6.0/ParseCrashReporting.framework"; sourceTree = "<group>"; };
 		52FC39A81A30F4F900B56BE9 /* GymWorkouts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GymWorkouts.swift; sourceTree = "<group>"; };
 		52FC39AA1A30F90800B56BE9 /* OCWorkouts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCWorkouts.swift; sourceTree = "<group>"; };
 		52FC39AC1A30FC1E00B56BE9 /* GymViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GymViewController.swift; sourceTree = "<group>"; };
@@ -197,6 +198,7 @@
 		5213D1BB1A2D775200BF5098 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				52FAE9E21A3A565C00427DA1 /* ParseCrashReporting.framework */,
 				5213D1B91A2D773100BF5098 /* AudioToolbox.framework */,
 				5213D1B71A2D772600BF5098 /* CFNetwork.framework */,
 				5213D1B51A2D771600BF5098 /* CoreGraphics.framework */,
@@ -526,6 +528,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/test/Documents/Development/Swipr,
+					"/Users/test/Documents/Development/parse-library-1.6.0",
 				);
 				INFOPLIST_FILE = "One West The Road to Oz/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -545,6 +548,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/test/Documents/Development/Swipr,
+					"/Users/test/Documents/Development/parse-library-1.6.0",
 				);
 				INFOPLIST_FILE = "One West The Road to Oz/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

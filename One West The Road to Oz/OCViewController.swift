@@ -151,6 +151,7 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
             var relation = workout.relationForKey("whoCompleted")
             relation.addObject(currentUser)
             workout.saveInBackgroundWithTarget(nil, selector: nil)
+            setupPointsLabel()
         }
         else {
             var errorAlert = SCLAlertView()
