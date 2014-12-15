@@ -14,8 +14,6 @@
 		5213D18B1A2D2B8B00BF5098 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5213D18A1A2D2B8B00BF5098 /* Images.xcassets */; };
 		5213D18E1A2D2B8B00BF5098 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5213D18C1A2D2B8B00BF5098 /* LaunchScreen.xib */; };
 		5213D19A1A2D2B8B00BF5098 /* One_West_The_Road_to_OzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5213D1991A2D2B8B00BF5098 /* One_West_The_Road_to_OzTests.swift */; };
-		5213D1A51A2D76AC00BF5098 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5213D1A31A2D76AC00BF5098 /* Bolts.framework */; };
-		5213D1A61A2D76AC00BF5098 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5213D1A41A2D76AC00BF5098 /* Parse.framework */; };
 		5213D1A81A2D76B900BF5098 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5213D1A71A2D76B900BF5098 /* SystemConfiguration.framework */; };
 		5213D1AA1A2D76C700BF5098 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5213D1A91A2D76C700BF5098 /* StoreKit.framework */; };
 		5213D1AC1A2D76CD00BF5098 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5213D1AB1A2D76CD00BF5098 /* Security.framework */; };
@@ -34,6 +32,8 @@
 		52814F201A2D7C8A00835680 /* NavDrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52814F1F1A2D7C8A00835680 /* NavDrawerViewController.swift */; };
 		52814F251A2D829600835680 /* NavDrawerTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52814F241A2D829600835680 /* NavDrawerTableCell.swift */; };
 		52814F271A2D82B100835680 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52814F261A2D82B100835680 /* User.swift */; };
+		52FAE9EB1A3CFE7B00427DA1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52FAE9EA1A3CFE7B00427DA1 /* Parse.framework */; };
+		52FAE9ED1A3CFE8C00427DA1 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52FAE9EC1A3CFE8C00427DA1 /* Bolts.framework */; };
 		52FC39A91A30F4F900B56BE9 /* GymWorkouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FC39A81A30F4F900B56BE9 /* GymWorkouts.swift */; };
 		52FC39AB1A30F90800B56BE9 /* OCWorkouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FC39AA1A30F90800B56BE9 /* OCWorkouts.swift */; };
 		52FC39AD1A30FC1E00B56BE9 /* GymViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FC39AC1A30FC1E00B56BE9 /* GymViewController.swift */; };
@@ -85,6 +85,12 @@
 		52814F241A2D829600835680 /* NavDrawerTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavDrawerTableCell.swift; sourceTree = "<group>"; };
 		52814F261A2D82B100835680 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		52FAE9E21A3A565C00427DA1 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = "../parse-library-1.6.0/ParseCrashReporting.framework"; sourceTree = "<group>"; };
+		52FAE9E61A3CFD9000427DA1 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
+		52FAE9E81A3CFDA300427DA1 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		52FAE9EA1A3CFE7B00427DA1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../parse-library-1.6.0/Parse.framework"; sourceTree = "<group>"; };
+		52FAE9EC1A3CFE8C00427DA1 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../parse-library-1.6.0/Bolts.framework"; sourceTree = "<group>"; };
+		52FAE9EE1A3CFF4500427DA1 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
+		52FAE9F11A3CFF6100427DA1 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		52FC39A81A30F4F900B56BE9 /* GymWorkouts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GymWorkouts.swift; sourceTree = "<group>"; };
 		52FC39AA1A30F90800B56BE9 /* OCWorkouts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCWorkouts.swift; sourceTree = "<group>"; };
 		52FC39AC1A30FC1E00B56BE9 /* GymViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GymViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +105,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52FAE9ED1A3CFE8C00427DA1 /* Bolts.framework in Frameworks */,
+				52FAE9EB1A3CFE7B00427DA1 /* Parse.framework in Frameworks */,
 				5213D1BA1A2D773100BF5098 /* AudioToolbox.framework in Frameworks */,
 				5213D1B81A2D772600BF5098 /* CFNetwork.framework in Frameworks */,
 				5213D1B61A2D771600BF5098 /* CoreGraphics.framework in Frameworks */,
@@ -109,8 +117,6 @@
 				5213D1AC1A2D76CD00BF5098 /* Security.framework in Frameworks */,
 				5213D1AA1A2D76C700BF5098 /* StoreKit.framework in Frameworks */,
 				5213D1A81A2D76B900BF5098 /* SystemConfiguration.framework in Frameworks */,
-				5213D1A51A2D76AC00BF5098 /* Bolts.framework in Frameworks */,
-				5213D1A61A2D76AC00BF5098 /* Parse.framework in Frameworks */,
 				2D28993F887B49B0182350FF /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -198,6 +204,12 @@
 		5213D1BB1A2D775200BF5098 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				52FAE9F11A3CFF6100427DA1 /* libsqlite3.0.dylib */,
+				52FAE9EE1A3CFF4500427DA1 /* libstdc++.6.0.9.dylib */,
+				52FAE9EC1A3CFE8C00427DA1 /* Bolts.framework */,
+				52FAE9EA1A3CFE7B00427DA1 /* Parse.framework */,
+				52FAE9E81A3CFDA300427DA1 /* libsqlite3.dylib */,
+				52FAE9E61A3CFD9000427DA1 /* libstdc++.6.dylib */,
 				52FAE9E21A3A565C00427DA1 /* ParseCrashReporting.framework */,
 				5213D1B91A2D773100BF5098 /* AudioToolbox.framework */,
 				5213D1B71A2D772600BF5098 /* CFNetwork.framework */,

@@ -20,6 +20,7 @@ class GymWorkouts : PFObject, PFSubclassing {
     }
     
     @NSManaged var workout : String
+    @NSManaged var reps : String
     @NSManaged var weekStarting : NSDate
     @NSManaged var day : String
     @NSManaged var whoCompleted : PFRelation?

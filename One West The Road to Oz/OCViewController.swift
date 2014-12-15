@@ -13,7 +13,7 @@ import Parse
 class OCViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate {
     
     let currentUser = User.currentUser()
-    
+    var refreshControl : UIRefreshControl!
     var workoutsArray = [OCWorkouts]()
     var thisWeek : OCWorkouts?
 
@@ -23,6 +23,12 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Refresh control
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refersh")
+        self.refreshControl.addTarget(self, action: "queryForWorkouts", forControlEvents: UIControlEvents.ValueChanged)
+        self.tableView.addSubview(refreshControl)
         
         var tapGesture = UITapGestureRecognizer(target: self, action: "workoutAlert:")
         tapGesture.numberOfTouchesRequired = 1
@@ -54,6 +60,9 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
                 self.tableView.reloadData()
             }
             
+        }
+        if (self.refreshControl != nil) {
+            self.refreshControl.endRefreshing()
         }
         
     }

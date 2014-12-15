@@ -93,7 +93,7 @@ class NavDrawerViewController: UIViewController, UITableViewDataSource, UITableV
     func profileImagePressed() {
         let photoPickerActionSheet: UIAlertController = UIAlertController(title: "Change Profile Image", message: "Choose a new profile image", preferredStyle: .ActionSheet)
         // UIAlertActions
-        let photoAction = UIAlertAction(title: "Take Photo", style: .Default) { (action: UIAlertAction!) -> Void in
+        let photoAction = UIAlertAction(title: "Take New Photo", style: .Default) { (action: UIAlertAction!) -> Void in
             let photoPicker: UIImagePickerController = UIImagePickerController()
             photoPicker.delegate = self
             photoPicker.sourceType = .Camera
