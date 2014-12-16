@@ -16,6 +16,7 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
     var refreshControl : UIRefreshControl!
     var workoutsArray = [OCWorkouts]()
     var thisWeek : OCWorkouts?
+    var selectedWeek : NSDate?
 
 
     @IBOutlet weak var weekStartingButton: UIButton!
@@ -24,8 +25,6 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        configureWeekStartingButton()
         
         // Refresh control
         self.refreshControl = UIRefreshControl()
@@ -41,29 +40,40 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        queryForWorkouts()
+        if selectedWeek == nil {
+            queryForLastWorkoutDate()
+        }
         setupPointsLabel()
     }
     
-    func configureWeekStartingButton() {
-        self.weekStartingButton.layer.shadowOpacity = 0.2
-        self.weekStartingButton.layer.shadowOffset = CGSizeMake(0, 2.0)
+    func configureWeekStartingButton(currentWeek : String) {
+        self.weekStartingButton.setTitle("Week Starting: " + currentWeek, forState: .Normal)
     }
     
-    func queryForWorkouts() {
-        self.workoutsArray.removeAll()
+    func queryForLastWorkoutDate() {
+        
         var query = OCWorkouts.query()
         query.whereKey("weekStarting", lessThan: Constants.todaysDate)
-        query.whereKey("weekStarting", greaterThan: Constants.lastWeek)
+        query.orderByDescending("createdAt")
+        query.getFirstObjectInBackgroundWithBlock { (object: PFObject!, error: NSError!) -> Void in
+            self.thisWeek = object as? OCWorkouts
+            self.queryForWorkouts(self.thisWeek!.weekStarting)
+        }
+        
+    }
+    
+    func queryForWorkouts(weekStarting : NSDate) {
+        self.workoutsArray.removeAll()
+        var query = OCWorkouts.query()
+        query.whereKey("weekStarting", equalTo: weekStarting)
         query.orderByAscending("day")
         query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) -> Void in
             if (error == nil) {
                 for object in objects {
                     self.workoutsArray.append(object as OCWorkouts)
                 }
-                self.thisWeek = objects[0] as? OCWorkouts
-                var thisWeek = self.setWeekFromDate(self.thisWeek!.weekStarting)
-                self.weekStartingButton.setTitle("Week Starting: " + thisWeek , forState: UIControlState.Normal)
+                var thisWeek = self.setWeekFromDate(weekStarting)
+                self.configureWeekStartingButton(thisWeek)
                 self.tableView.reloadData()
             }
             
