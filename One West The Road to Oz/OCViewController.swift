@@ -17,16 +17,18 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
     var workoutsArray = [OCWorkouts]()
     var thisWeek : OCWorkouts?
 
-    @IBOutlet weak var weekStartingLabel: UILabel!
+
+    @IBOutlet weak var weekStartingButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var pointsLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureWeekStartingButton()
+        
         // Refresh control
         self.refreshControl = UIRefreshControl()
-        self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refersh")
         self.refreshControl.addTarget(self, action: "queryForWorkouts", forControlEvents: UIControlEvents.ValueChanged)
         self.tableView.addSubview(refreshControl)
         
@@ -43,6 +45,11 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
         setupPointsLabel()
     }
     
+    func configureWeekStartingButton() {
+        self.weekStartingButton.layer.shadowOpacity = 0.2
+        self.weekStartingButton.layer.shadowOffset = CGSizeMake(0, 2.0)
+    }
+    
     func queryForWorkouts() {
         self.workoutsArray.removeAll()
         var query = OCWorkouts.query()
@@ -56,7 +63,7 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
                 }
                 self.thisWeek = objects[0] as? OCWorkouts
                 var thisWeek = self.setWeekFromDate(self.thisWeek!.weekStarting)
-                self.weekStartingLabel.text = "Week Starting: " + thisWeek
+                self.weekStartingButton.setTitle("Week Starting: " + thisWeek , forState: UIControlState.Normal)
                 self.tableView.reloadData()
             }
             

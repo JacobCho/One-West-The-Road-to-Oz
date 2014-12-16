@@ -22,6 +22,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if let user = User.currentUser() {
+            let containerViewController = ContainerViewController()
+            self.presentViewController(containerViewController, animated: true, completion: nil)
+        }
+    }
+    
     
     
     @IBAction func loginButtonPressed(sender: UIButton) {
