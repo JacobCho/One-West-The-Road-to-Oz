@@ -28,7 +28,7 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
         
         // Refresh control
         self.refreshControl = UIRefreshControl()
-        self.refreshControl.addTarget(self, action: "queryForWorkouts", forControlEvents: UIControlEvents.ValueChanged)
+        self.refreshControl.addTarget(self, action: "refreshing:", forControlEvents: UIControlEvents.ValueChanged)
         self.tableView.addSubview(refreshControl)
         
         var tapGesture = UITapGestureRecognizer(target: self, action: "workoutAlert:")
@@ -46,9 +46,7 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
         setupPointsLabel()
     }
     
-    func configureWeekStartingButton(currentWeek : String) {
-        self.weekStartingButton.setTitle("Week Starting: " + currentWeek, forState: .Normal)
-    }
+    // MARK: Parse methods
     
     func queryForLastWorkoutDate() {
         
@@ -82,10 +80,6 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
             self.refreshControl.endRefreshing()
         }
         
-    }
-    
-    func setupPointsLabel() {
-        self.pointsLabel.text = "Points: " + String(currentUser.ocPoints)
     }
     
     func checkForCompletion(workout : OCWorkouts, indexPath : NSIndexPath) {
@@ -189,6 +183,22 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
         var cell : WorkoutsTableViewCell = self.tableView.cellForRowAtIndexPath(indexPath) as WorkoutsTableViewCell
         cell.completedImageView.image = UIImage(named: "completedIcon")
         cell.workoutCompleted = true
+    }
+    
+    func configureWeekStartingButton(currentWeek : String) {
+        self.weekStartingButton.setTitle("Week Starting: " + currentWeek, forState: .Normal)
+    }
+    
+    func refreshing(sender: AnyObject) {
+        self.queryForWorkouts(self.thisWeek!.weekStarting)
+        
+        sender as UIRefreshControl
+        
+        sender.endRefreshing()
+    }
+    
+    func setupPointsLabel() {
+        self.pointsLabel.text = "Points: " + String(currentUser.ocPoints)
     }
 
 }
