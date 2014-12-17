@@ -649,6 +649,9 @@
                                                 <include reference="xSV-fU-y47"/>
                                             </mask>
                                         </variation>
+                                        <connections>
+                                            <action selector="weekStartingButtonPressed:" destination="gKj-nq-gg7" eventType="touchUpInside" id="ZE3-Yd-1WI"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

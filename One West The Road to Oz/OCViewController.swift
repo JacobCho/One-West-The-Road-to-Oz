@@ -10,13 +10,14 @@ import UIKit
 import Parse
 
 
-class OCViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate {
+class OCViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
     let currentUser = User.currentUser()
     var refreshControl : UIRefreshControl!
     var workoutsArray = [OCWorkouts]()
     var thisWeek : OCWorkouts?
     var selectedWeek : NSDate?
+    let fakeArray = ["One", "Two", "Three", "Four", "Five"]
 
 
     @IBOutlet weak var weekStartingButton: UIButton!
@@ -44,6 +45,29 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
             queryForLastWorkoutDate()
         }
         setupPointsLabel()
+    }
+    @IBAction func weekStartingButtonPressed(sender: UIButton) {
+        
+        var datePickerAlert = UIAlertController(title: "Pick a date", message: "\n\n\n\n\n\n\n\n\n\n", preferredStyle: .ActionSheet)
+        var pickerFrame = CGRectMake(17, 52, 270, 100)
+        var picker : UIPickerView = UIPickerView(frame: pickerFrame)
+        
+        picker.delegate = self
+        picker.dataSource = self
+        
+        picker.showsSelectionIndicator = true
+        
+        datePickerAlert.view.addSubview(picker)
+        
+        let selectAction = UIAlertAction(title: "Select", style: .Default) { (action: UIAlertAction!) -> Void in
+            
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+        datePickerAlert.addAction(selectAction)
+        datePickerAlert.addAction(cancelAction)
+        datePickerAlert.view.tintColor = Constants.flatRed
+        self.presentViewController(datePickerAlert, animated: true, completion: nil)
     }
     
     // MARK: Parse methods
@@ -199,6 +223,27 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
     
     func setupPointsLabel() {
         self.pointsLabel.text = "Points: " + String(currentUser.ocPoints)
+    }
+    
+    // MARK : UIPickerDataSource Methods
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    // returns the # of rows in each component..
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        println(fakeArray.count)
+        return fakeArray.count
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+        println(fakeArray[row])
+        return fakeArray[row]
+    }
+
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
     }
 
 }
