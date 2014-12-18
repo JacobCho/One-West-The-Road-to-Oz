@@ -233,7 +233,11 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
     }
     
     func refreshing(sender: AnyObject) {
-        self.queryForWorkouts(self.thisWeek!.weekStarting)
+        if (self.selectedWeek == nil) {
+            self.queryForWorkouts(self.thisWeek!.weekStarting)
+        } else {
+            self.queryForWorkouts(self.selectedWeek!)
+        }
         
         sender as UIRefreshControl
         
