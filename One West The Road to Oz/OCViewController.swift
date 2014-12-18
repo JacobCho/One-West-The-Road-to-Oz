@@ -17,7 +17,7 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
     var workoutsArray = [OCWorkouts]()
     var thisWeek : OCWorkouts?
     var selectedWeek : NSDate?
-    let fakeArray = ["One", "Two", "Three", "Four", "Five"]
+    var pickerArray : [NSDate] = []
 
 
     @IBOutlet weak var weekStartingButton: UIButton!
@@ -26,6 +26,7 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        fillPickerArray()
         
         // Refresh control
         self.refreshControl = UIRefreshControl()
@@ -49,18 +50,21 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
     @IBAction func weekStartingButtonPressed(sender: UIButton) {
         
         var datePickerAlert = UIAlertController(title: "Pick a date", message: "\n\n\n\n\n\n\n\n\n\n", preferredStyle: .ActionSheet)
-        var pickerFrame = CGRectMake(17, 52, 270, 100)
+        var pickerFrame = CGRectMake(17, 52, datePickerAlert.view.bounds.width - 50, 100)
         var picker : UIPickerView = UIPickerView(frame: pickerFrame)
         
         picker.delegate = self
         picker.dataSource = self
         
         picker.showsSelectionIndicator = true
+        picker.selectRow(0, inComponent: 0, animated: false)
         
         datePickerAlert.view.addSubview(picker)
         
         let selectAction = UIAlertAction(title: "Select", style: .Default) { (action: UIAlertAction!) -> Void in
-            
+            var row = picker.selectedRowInComponent(0)
+            self.selectedWeek = self.pickerArray[row]
+            self.queryForWorkouts(self.selectedWeek!)
         }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
@@ -71,6 +75,21 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
     }
     
     // MARK: Parse methods
+    
+    func fillPickerArray() {
+        var query = OCWorkouts.query()
+        query.orderByDescending("createdAt")
+        query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) -> Void in
+            for object in objects {
+                var workout = object as OCWorkouts
+                if self.pickerArray.last != workout.weekStarting {
+                    self.pickerArray.append(workout.weekStarting)
+                }
+                
+            }
+            
+        }
+    }
     
     func queryForLastWorkoutDate() {
         
@@ -233,17 +252,17 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
     
     // returns the # of rows in each component..
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        println(fakeArray.count)
-        return fakeArray.count
+
+        return pickerArray.count
     }
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
-        println(fakeArray[row])
-        return fakeArray[row]
+
+        return setWeekFromDate(pickerArray[row])
     }
 
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
+
     }
 
 }
