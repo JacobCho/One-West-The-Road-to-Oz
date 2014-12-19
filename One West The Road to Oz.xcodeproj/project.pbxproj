@@ -24,7 +24,7 @@
 		5213D1B61A2D771600BF5098 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5213D1B51A2D771600BF5098 /* CoreGraphics.framework */; };
 		5213D1B81A2D772600BF5098 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5213D1B71A2D772600BF5098 /* CFNetwork.framework */; };
 		5213D1BA1A2D773100BF5098 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5213D1B91A2D773100BF5098 /* AudioToolbox.framework */; };
-		52296D8C1A3130E40078919E /* WorkoutsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52296D8B1A3130E40078919E /* WorkoutsTableViewCell.swift */; };
+		52296D8C1A3130E40078919E /* OCWorkoutsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52296D8B1A3130E40078919E /* OCWorkoutsTableViewCell.swift */; };
 		52296D921A36D8560078919E /* WorkoutsTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52296D911A36D8560078919E /* WorkoutsTabBarController.swift */; };
 		523AB8711A2EC55D005C7A66 /* CenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523AB8701A2EC55D005C7A66 /* CenterViewController.swift */; };
 		527483141A37BEB500C51315 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527483131A37BEB500C51315 /* LoginViewController.swift */; };
@@ -34,6 +34,7 @@
 		52814F271A2D82B100835680 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52814F261A2D82B100835680 /* User.swift */; };
 		52FAE9EB1A3CFE7B00427DA1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52FAE9EA1A3CFE7B00427DA1 /* Parse.framework */; };
 		52FAE9ED1A3CFE8C00427DA1 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52FAE9EC1A3CFE8C00427DA1 /* Bolts.framework */; };
+		52FAE9F41A4398F900427DA1 /* GymWorkoutsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FAE9F31A4398F900427DA1 /* GymWorkoutsTableViewCell.swift */; };
 		52FC39A91A30F4F900B56BE9 /* GymWorkouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FC39A81A30F4F900B56BE9 /* GymWorkouts.swift */; };
 		52FC39AB1A30F90800B56BE9 /* OCWorkouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FC39AA1A30F90800B56BE9 /* OCWorkouts.swift */; };
 		52FC39AD1A30FC1E00B56BE9 /* GymViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FC39AC1A30FC1E00B56BE9 /* GymViewController.swift */; };
@@ -75,7 +76,7 @@
 		5213D1B51A2D771600BF5098 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		5213D1B71A2D772600BF5098 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		5213D1B91A2D773100BF5098 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		52296D8B1A3130E40078919E /* WorkoutsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutsTableViewCell.swift; sourceTree = "<group>"; };
+		52296D8B1A3130E40078919E /* OCWorkoutsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCWorkoutsTableViewCell.swift; sourceTree = "<group>"; };
 		52296D911A36D8560078919E /* WorkoutsTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutsTabBarController.swift; sourceTree = "<group>"; };
 		523AB8701A2EC55D005C7A66 /* CenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterViewController.swift; sourceTree = "<group>"; };
 		527483131A37BEB500C51315 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +92,7 @@
 		52FAE9EC1A3CFE8C00427DA1 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../parse-library-1.6.0/Bolts.framework"; sourceTree = "<group>"; };
 		52FAE9EE1A3CFF4500427DA1 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
 		52FAE9F11A3CFF6100427DA1 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		52FAE9F31A4398F900427DA1 /* GymWorkoutsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GymWorkoutsTableViewCell.swift; sourceTree = "<group>"; };
 		52FC39A81A30F4F900B56BE9 /* GymWorkouts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GymWorkouts.swift; sourceTree = "<group>"; };
 		52FC39AA1A30F90800B56BE9 /* OCWorkouts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCWorkouts.swift; sourceTree = "<group>"; };
 		52FC39AC1A30FC1E00B56BE9 /* GymViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GymViewController.swift; sourceTree = "<group>"; };
@@ -243,7 +245,8 @@
 			children = (
 				5213D1871A2D2B8B00BF5098 /* Main.storyboard */,
 				52814F241A2D829600835680 /* NavDrawerTableCell.swift */,
-				52296D8B1A3130E40078919E /* WorkoutsTableViewCell.swift */,
+				52296D8B1A3130E40078919E /* OCWorkoutsTableViewCell.swift */,
+				52FAE9F31A4398F900427DA1 /* GymWorkoutsTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				52814F271A2D82B100835680 /* User.swift in Sources */,
 				527483161A3924D200C51315 /* Constants.swift in Sources */,
 				52814F251A2D829600835680 /* NavDrawerTableCell.swift in Sources */,
+				52FAE9F41A4398F900427DA1 /* GymWorkoutsTableViewCell.swift in Sources */,
 				52FC39AB1A30F90800B56BE9 /* OCWorkouts.swift in Sources */,
 				52FC39B11A30FCA100B56BE9 /* PointsViewController.swift in Sources */,
 				5211A64C1A2D92A2005CB6F2 /* ContainerViewController.swift in Sources */,
@@ -412,7 +416,7 @@
 				5213D1821A2D2B8B00BF5098 /* AppDelegate.swift in Sources */,
 				52FC39AF1A30FC4000B56BE9 /* OCViewController.swift in Sources */,
 				52814F201A2D7C8A00835680 /* NavDrawerViewController.swift in Sources */,
-				52296D8C1A3130E40078919E /* WorkoutsTableViewCell.swift in Sources */,
+				52296D8C1A3130E40078919E /* OCWorkoutsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

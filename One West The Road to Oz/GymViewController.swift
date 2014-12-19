@@ -8,23 +8,73 @@
 
 import UIKit
 
-class GymViewController: UIViewController {
+class GymViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+        var sec1Array = []
+        var sec2Array = []
+        var sec3Array = []
+        var sectionArray = []
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        sec1Array = ["Item 1", "Item 2", "Item 3", "Item 4"]
+        sec2Array = ["Item 1", "Item 2", "Item 3", "Item 4"]
+        sec3Array = ["Item 1", "Item 2", "Item 3", "Item 4"]
+        sectionArray = [sec1Array, sec2Array, sec3Array]
 
         // Do any additional setup after loading the view.
     }
+
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 3
     }
-    */
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return sectionArray.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        var cell : GymWorkoutsTableViewCell = tableView.dequeueReusableCellWithIdentifier("GymWorkoutsCell", forIndexPath: indexPath) as GymWorkoutsTableViewCell
+        
+        var array = sectionArray[indexPath.section]
+        
+        cell.workoutLabel.text = array[indexPath.row] as? String
+        
+        return cell
+        
+    }
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0:
+            return "Section 1"
+        case 1:
+            return "Section 2"
+            
+        case 2:
+            return "Section 3"
+            
+        default:
+            return "Default Section"
+            
+        }
+        
+    }
+    
+    // Mark: Table View Delegate
+    
+    func tableView(tableView: UITableView, DidSelectRowAtIndexPath indexPath: NSIndexPath) {
+        println("Row Selected")
+    }
+    
+    func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return false
+    }
+
+    
+    
 
 }

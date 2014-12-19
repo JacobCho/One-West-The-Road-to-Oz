@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WorkoutsTableViewCell: UITableViewCell {
+class OCWorkoutsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var workoutLabel: UILabel!

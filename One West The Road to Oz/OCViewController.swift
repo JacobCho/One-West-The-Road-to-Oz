@@ -158,7 +158,7 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        var cell : WorkoutsTableViewCell = tableView.dequeueReusableCellWithIdentifier("OCWorkoutCell", forIndexPath: indexPath) as WorkoutsTableViewCell
+        var cell : OCWorkoutsTableViewCell = tableView.dequeueReusableCellWithIdentifier("OCWorkoutCell", forIndexPath: indexPath) as OCWorkoutsTableViewCell
         
         var workout = workoutsArray[indexPath.row]
         self.checkForCompletion(workout, indexPath: indexPath)
@@ -203,7 +203,7 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
     }
     
     func completeWorkout(indexPath: NSIndexPath) {
-        var cell : WorkoutsTableViewCell = self.tableView.cellForRowAtIndexPath(indexPath) as WorkoutsTableViewCell
+        var cell : OCWorkoutsTableViewCell = self.tableView.cellForRowAtIndexPath(indexPath) as OCWorkoutsTableViewCell
         if (!cell.workoutCompleted) {
             self.addCompletedImage(indexPath)
             // add OC points to current user and save
@@ -223,7 +223,7 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
     }
     
     func addCompletedImage(indexPath: NSIndexPath) {
-        var cell : WorkoutsTableViewCell = self.tableView.cellForRowAtIndexPath(indexPath) as WorkoutsTableViewCell
+        var cell : OCWorkoutsTableViewCell = self.tableView.cellForRowAtIndexPath(indexPath) as OCWorkoutsTableViewCell
         cell.completedImageView.image = UIImage(named: "completedIcon")
         cell.workoutCompleted = true
     }
