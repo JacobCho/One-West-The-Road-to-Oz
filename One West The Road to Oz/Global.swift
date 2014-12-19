@@ -16,5 +16,15 @@ struct Constants {
    static let nextWeek = NSDate(timeInterval: weekInSecs, sinceDate: todaysDate)
    static let lastWeek = NSDate(timeInterval: -weekInSecs, sinceDate: todaysDate)
     
+    
+}
+
+class Global {
+    class func setWeekFromDate(thisWeek : NSDate) -> String {
+        var dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "MMM dd"
+        
+        return dateFormatter.stringFromDate(thisWeek.dateByAddingTimeInterval(60*60*24*1))
+    }
 }
 

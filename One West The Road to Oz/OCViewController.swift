@@ -19,7 +19,6 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
     var selectedWeek : NSDate?
     var pickerArray : [NSDate] = []
 
-
     @IBOutlet weak var weekStartingButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var pointsLabel: UILabel!
@@ -113,7 +112,7 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
                 for object in objects {
                     self.workoutsArray.append(object as OCWorkouts)
                 }
-                var thisWeek = self.setWeekFromDate(weekStarting)
+                var thisWeek = Global.setWeekFromDate(weekStarting)
                 self.configureWeekStartingButton(thisWeek)
                 self.tableView.reloadData()
             }
@@ -170,7 +169,7 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
         
     }
     
-    // Mark: Table View Delegate
+    // MARK: Table View Delegate
     
     func tableView(tableView: UITableView, DidSelectRowAtIndexPath indexPath: NSIndexPath) {
        println("Row Selected")
@@ -180,13 +179,7 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
         return false
     }
     
-    // Mark: Helper Methods
-    func setWeekFromDate(thisWeek : NSDate) -> String {
-        var dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "MMM dd"
-        
-        return dateFormatter.stringFromDate(thisWeek.dateByAddingTimeInterval(60*60*24*1))
-    }
+    // MARK: Helper Methods
     
     func workoutAlert(gesture : UITapGestureRecognizer) {
         
@@ -262,7 +255,7 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
 
-        return setWeekFromDate(pickerArray[row])
+        return Global.setWeekFromDate(pickerArray[row])
     }
 
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {

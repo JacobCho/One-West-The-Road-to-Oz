@@ -849,6 +849,7 @@
                                         </variation>
                                         <connections>
                                             <action selector="weekStartingButtonPressed:" destination="gKj-nq-gg7" eventType="touchUpInside" id="1eH-Xk-yph"/>
+                                            <action selector="weekStartingButtonPressed:" destination="ox8-Th-Tii" eventType="touchUpInside" id="iHa-YX-Pq6"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1027,13 +1028,17 @@
                             <constraint firstAttribute="centerX" secondItem="x3F-p8-f1D" secondAttribute="centerX" id="Wfc-08-ZQ4"/>
                             <constraint firstAttribute="centerX" secondItem="Iz3-GF-eT5" secondAttribute="centerX" id="Yal-TK-gQc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="x3F-p8-f1D" secondAttribute="trailing" id="Zfk-eV-L4x"/>
-                            <constraint firstItem="C2K-jv-Guo" firstAttribute="top" secondItem="Iz3-GF-eT5" secondAttribute="bottom" id="gJh-YP-Y4U"/>
+                            <constraint firstItem="C2K-jv-Guo" firstAttribute="top" secondItem="Iz3-GF-eT5" secondAttribute="bottom" id="gJh-YP-Y4U">
+                                <variation key="widthClass=compact" constant="43"/>
+                            </constraint>
                             <constraint firstAttribute="trailingMargin" secondItem="x3F-p8-f1D" secondAttribute="trailing" id="iLz-p5-hxk"/>
                             <constraint firstAttribute="width" secondItem="x3F-p8-f1D" secondAttribute="width" id="jAG-PC-QiN"/>
                             <constraint firstItem="x3F-p8-f1D" firstAttribute="leading" secondItem="KNc-eA-31k" secondAttribute="leadingMargin" constant="-16" id="reg-Su-KcB">
                                 <variation key="widthClass=compact" constant="0.0"/>
                             </constraint>
-                            <constraint firstItem="Iz3-GF-eT5" firstAttribute="top" secondItem="x3F-p8-f1D" secondAttribute="bottom" constant="16" id="vOv-fZ-vzY"/>
+                            <constraint firstItem="Iz3-GF-eT5" firstAttribute="top" secondItem="x3F-p8-f1D" secondAttribute="bottom" constant="16" id="vOv-fZ-vzY">
+                                <variation key="widthClass=compact" constant="17"/>
+                            </constraint>
                             <constraint firstAttribute="centerX" secondItem="x3F-p8-f1D" secondAttribute="centerX" id="vml-T8-cce"/>
                         </constraints>
                         <variation key="default">
@@ -1080,6 +1085,11 @@
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Gym" image="gymTabIcon" id="twi-XE-ohm"/>
+                    <connections>
+                        <outlet property="pointsLabel" destination="b8Q-Ru-A3i" id="ZWg-bn-V2v"/>
+                        <outlet property="tableView" destination="Iz3-GF-eT5" id="1cM-0h-Wmw"/>
+                        <outlet property="weekStartingButton" destination="Zwj-g1-PWX" id="FQk-yD-fHz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ydj-Zm-jFJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

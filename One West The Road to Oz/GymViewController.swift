@@ -10,12 +10,20 @@ import UIKit
 
 class GymViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+        let currentUser = User.currentUser()
         var sec1Array = []
         var sec2Array = []
         var sec3Array = []
         var sectionArray = []
+    
+    @IBOutlet weak var weekStartingButton: UIButton!
+    @IBOutlet weak var pointsLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setUpPointsLabel()
         
         sec1Array = ["Item 1", "Item 2", "Item 3", "Item 4"]
         sec2Array = ["Item 1", "Item 2", "Item 3", "Item 4"]
@@ -25,10 +33,14 @@ class GymViewController: UIViewController, UITableViewDataSource, UITableViewDel
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func weekStartingButtonPressed(sender: UIButton) {
+    }
+    
+    // MARK: Table View Data Source
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 3
+        return 4
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -64,7 +76,7 @@ class GymViewController: UIViewController, UITableViewDataSource, UITableViewDel
         
     }
     
-    // Mark: Table View Delegate
+    // MARK: Table View Delegate
     
     func tableView(tableView: UITableView, DidSelectRowAtIndexPath indexPath: NSIndexPath) {
         println("Row Selected")
@@ -74,7 +86,9 @@ class GymViewController: UIViewController, UITableViewDataSource, UITableViewDel
         return false
     }
 
-    
-    
+    // MARK: Helper Methods
+    func setUpPointsLabel() {
+        self.pointsLabel.text = "Points: " + String(self.currentUser.gymPoints)
+    }
 
 }
