@@ -94,7 +94,7 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
         
         var query = OCWorkouts.query()
         query.whereKey("weekStarting", lessThan: Constants.todaysDate)
-        query.orderByDescending("createdAt")
+        query.orderByDescending("weekStarting")
         query.getFirstObjectInBackgroundWithBlock { (object: PFObject!, error: NSError!) -> Void in
             self.thisWeek = object as? OCWorkouts
             self.queryForWorkouts(self.thisWeek!.weekStarting)
