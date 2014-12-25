@@ -13,6 +13,7 @@ class GymWorkoutsTableViewCell: UITableViewCell {
     @IBOutlet weak var workoutLabel: UILabel!
     @IBOutlet weak var repsLabel: UILabel!
     @IBOutlet weak var completedImageView: UIImageView!
+    var workoutCompleted = false
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -27,6 +27,12 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
         super.viewDidLoad()
         fillPickerArray()
         
+        // Fill out default workouts from latest week
+        if selectedWeek == nil {
+            queryForLastWorkoutDate()
+        }
+        setupPointsLabel()
+        
         // Refresh control
         self.refreshControl = UIRefreshControl()
         self.refreshControl.addTarget(self, action: "refreshing:", forControlEvents: UIControlEvents.ValueChanged)
@@ -41,10 +47,7 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        if selectedWeek == nil {
-            queryForLastWorkoutDate()
-        }
-        setupPointsLabel()
+        
     }
     @IBAction func weekStartingButtonPressed(sender: UIButton) {
         
