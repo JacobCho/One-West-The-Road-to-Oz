@@ -16,7 +16,7 @@ class GymViewController: UIViewController, UITableViewDataSource, UITableViewDel
     var day2Array : [GymWorkouts]?
     var day3Array : [GymWorkouts]?
     var weekArray : [NSArray] = []
-    
+    var refreshControl : UIRefreshControl!
     var pickerArray : [NSDate] = []
     var thisWeek : GymWorkouts?
     var workoutsArray = [GymWorkouts]()
@@ -37,6 +37,11 @@ class GymViewController: UIViewController, UITableViewDataSource, UITableViewDel
             self.day2Array = []
             self.day3Array = []
         }
+        
+        // Refresh control
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl.addTarget(self, action: "refreshing:", forControlEvents: UIControlEvents.ValueChanged)
+        self.tableView.addSubview(refreshControl)
 
         var tapGesture = UITapGestureRecognizer(target: self, action: "workoutAlert:")
         tapGesture.numberOfTouchesRequired = 1
@@ -89,6 +94,7 @@ class GymViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     func queryForWorkouts(weekStarting : NSDate) {
         self.workoutsArray.removeAll()
+        self.weekArray.removeAll()
         var query = GymWorkouts.query()
         query.whereKey("weekStarting", equalTo: weekStarting)
         query.orderByAscending("day")
@@ -123,9 +129,9 @@ class GymViewController: UIViewController, UITableViewDataSource, UITableViewDel
             }
             
         }
-//        if (self.refreshControl != nil) {
-//            self.refreshControl.endRefreshing()
-//        }
+        if (self.refreshControl != nil) {
+            self.refreshControl.endRefreshing()
+        }
         
     }
     
@@ -209,6 +215,7 @@ class GymViewController: UIViewController, UITableViewDataSource, UITableViewDel
     // MARK: Helper Methods
     func setUpPointsLabel() {
         self.pointsLabel.text = "Points: " + String(self.currentUser.gymPoints)
+        println(self.currentUser.gymPoints)
     }
     
     func configureWeekStartingButton(currentWeek : String) {
@@ -254,6 +261,18 @@ class GymViewController: UIViewController, UITableViewDataSource, UITableViewDel
             var errorAlert = SCLAlertView()
             errorAlert.showError(self, title: "Already Completed", subTitle: "You can't complete the same workout twice", closeButtonTitle: "Ok", duration: 0)
         }
+    }
+    
+    func refreshing(sender: AnyObject) {
+        if (self.selectedWeek == nil) {
+            self.queryForWorkouts(self.thisWeek!.weekStarting)
+        } else {
+            self.queryForWorkouts(self.selectedWeek!)
+        }
+        
+        sender as UIRefreshControl
+        
+        sender.endRefreshing()
     }
 
 }
