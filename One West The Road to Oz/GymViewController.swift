@@ -116,8 +116,7 @@ class GymViewController: UIViewController, UITableViewDataSource, UITableViewDel
     }
     
     func queryForWorkouts(weekStarting : NSDate) {
-        self.workoutsArray.removeAll()
-        self.weekArray.removeAll()
+        self.clearAllArrays()
         var query = GymWorkouts.query()
         query.whereKey("weekStarting", equalTo: weekStarting)
         query.orderByAscending("day")
@@ -132,6 +131,7 @@ class GymViewController: UIViewController, UITableViewDataSource, UITableViewDel
                     }
                     else if workout.day == "Day 2" {
                         self.day2Array!.append(workout)
+                        println(self.day2Array)
                     }
                     else if workout.day == "Day 3" {
                         self.day3Array!.append(workout)
@@ -236,6 +236,14 @@ class GymViewController: UIViewController, UITableViewDataSource, UITableViewDel
     }
 
     // MARK: Helper Methods
+    func clearAllArrays() {
+        self.workoutsArray.removeAll()
+        self.weekArray.removeAll()
+        self.day1Array!.removeAll()
+        self.day2Array!.removeAll()
+        self.day3Array!.removeAll()
+
+    }
     func setUpPointsLabel() {
         self.pointsLabel.text = "Points: " + String(self.currentUser.gymPoints)
         println(self.currentUser.gymPoints)
