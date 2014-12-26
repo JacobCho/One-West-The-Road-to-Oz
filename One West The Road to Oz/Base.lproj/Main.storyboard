@@ -912,16 +912,16 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <color key="textColor" red="0.45882352941176469" green="0.45882352941176469" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
-                                                            <variation key="widthClass=compact" fixedFrame="YES">
+                                                            <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                                                 <rect key="frame" x="8" y="8" width="253" height="71"/>
                                                             </variation>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reps" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtn-aw-82V">
                                                             <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <color key="textColor" red="0.45882352941176469" green="0.45882352941176469" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="textColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
-                                                            <variation key="widthClass=compact" fixedFrame="YES">
+                                                            <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                                                 <rect key="frame" x="8" y="87" width="253" height="21"/>
                                                             </variation>
                                                         </label>
@@ -947,7 +947,13 @@
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
+                                                        <constraint firstItem="yOh-fH-G9w" firstAttribute="top" secondItem="WNa-bW-1zu" secondAttribute="top" constant="8" id="DlO-SL-T6H"/>
+                                                        <constraint firstItem="0EX-RA-HPB" firstAttribute="leading" secondItem="yOh-fH-G9w" secondAttribute="trailing" constant="20" id="H66-O8-aHu"/>
+                                                        <constraint firstItem="yOh-fH-G9w" firstAttribute="leading" secondItem="WNa-bW-1zu" secondAttribute="leading" constant="8" id="Lq4-r1-17n"/>
                                                         <constraint firstAttribute="trailing" secondItem="0EX-RA-HPB" secondAttribute="trailing" constant="8" id="R2N-hj-eaM"/>
+                                                        <constraint firstItem="vtn-aw-82V" firstAttribute="top" secondItem="yOh-fH-G9w" secondAttribute="bottom" constant="8" id="X8a-tT-Jik"/>
+                                                        <constraint firstItem="vtn-aw-82V" firstAttribute="leading" secondItem="WNa-bW-1zu" secondAttribute="leading" constant="8" id="brz-Sp-0G8"/>
+                                                        <constraint firstAttribute="bottom" secondItem="vtn-aw-82V" secondAttribute="bottom" constant="8" id="j8U-Oq-bCw"/>
                                                         <constraint firstAttribute="centerY" secondItem="0EX-RA-HPB" secondAttribute="centerY" id="zHh-M7-eYC"/>
                                                     </constraints>
                                                     <variation key="default">
@@ -957,6 +963,12 @@
                                                             <exclude reference="0EX-RA-HPB"/>
                                                         </mask>
                                                         <mask key="constraints">
+                                                            <exclude reference="DlO-SL-T6H"/>
+                                                            <exclude reference="Lq4-r1-17n"/>
+                                                            <exclude reference="X8a-tT-Jik"/>
+                                                            <exclude reference="brz-Sp-0G8"/>
+                                                            <exclude reference="j8U-Oq-bCw"/>
+                                                            <exclude reference="H66-O8-aHu"/>
                                                             <exclude reference="R2N-hj-eaM"/>
                                                             <exclude reference="zHh-M7-eYC"/>
                                                         </mask>
@@ -968,6 +980,12 @@
                                                             <include reference="0EX-RA-HPB"/>
                                                         </mask>
                                                         <mask key="constraints">
+                                                            <include reference="DlO-SL-T6H"/>
+                                                            <include reference="Lq4-r1-17n"/>
+                                                            <include reference="X8a-tT-Jik"/>
+                                                            <include reference="brz-Sp-0G8"/>
+                                                            <include reference="j8U-Oq-bCw"/>
+                                                            <include reference="H66-O8-aHu"/>
                                                             <include reference="R2N-hj-eaM"/>
                                                             <include reference="zHh-M7-eYC"/>
                                                         </mask>
@@ -1045,6 +1063,12 @@
                                 <exclude reference="Iz3-GF-eT5"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="XNr-Dx-mNp"/>
+                                <exclude reference="0i1-ZA-944"/>
+                                <exclude reference="2GG-s3-hnj"/>
+                                <exclude reference="Faf-te-0Nl"/>
+                                <exclude reference="Yal-TK-gQc"/>
+                                <exclude reference="vOv-fZ-vzY"/>
                                 <exclude reference="GMK-Jo-drV"/>
                                 <exclude reference="Wfc-08-ZQ4"/>
                                 <exclude reference="Zfk-eV-L4x"/>
@@ -1052,12 +1076,6 @@
                                 <exclude reference="jAG-PC-QiN"/>
                                 <exclude reference="reg-Su-KcB"/>
                                 <exclude reference="vml-T8-cce"/>
-                                <exclude reference="0i1-ZA-944"/>
-                                <exclude reference="2GG-s3-hnj"/>
-                                <exclude reference="Faf-te-0Nl"/>
-                                <exclude reference="Yal-TK-gQc"/>
-                                <exclude reference="vOv-fZ-vzY"/>
-                                <exclude reference="XNr-Dx-mNp"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -1066,6 +1084,12 @@
                                 <include reference="Iz3-GF-eT5"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="XNr-Dx-mNp"/>
+                                <include reference="0i1-ZA-944"/>
+                                <include reference="2GG-s3-hnj"/>
+                                <exclude reference="Faf-te-0Nl"/>
+                                <include reference="Yal-TK-gQc"/>
+                                <include reference="vOv-fZ-vzY"/>
                                 <include reference="GMK-Jo-drV"/>
                                 <include reference="Wfc-08-ZQ4"/>
                                 <exclude reference="Zfk-eV-L4x"/>
@@ -1073,12 +1097,6 @@
                                 <include reference="jAG-PC-QiN"/>
                                 <exclude reference="reg-Su-KcB"/>
                                 <exclude reference="vml-T8-cce"/>
-                                <include reference="0i1-ZA-944"/>
-                                <include reference="2GG-s3-hnj"/>
-                                <exclude reference="Faf-te-0Nl"/>
-                                <include reference="Yal-TK-gQc"/>
-                                <include reference="vOv-fZ-vzY"/>
-                                <include reference="XNr-Dx-mNp"/>
                             </mask>
                         </variation>
                     </view>

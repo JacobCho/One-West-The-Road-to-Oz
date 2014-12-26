@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class GymViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate {
+class GymViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
 
     let currentUser = User.currentUser()
     var day1Array : [GymWorkouts]?
@@ -30,6 +30,7 @@ class GymViewController: UIViewController, UITableViewDataSource, UITableViewDel
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpPointsLabel()
+        self.fillPickerArray()
         
         if selectedWeek == nil {
             self.queryForLastWorkoutDate()
@@ -54,7 +55,29 @@ class GymViewController: UIViewController, UITableViewDataSource, UITableViewDel
     }
 
     @IBAction func weekStartingButtonPressed(sender: UIButton) {
+        var datePickerAlert = UIAlertController(title: "Pick a date", message: "\n\n\n\n\n\n\n\n\n\n", preferredStyle: .ActionSheet)
+        var pickerFrame = CGRectMake(17, 52, datePickerAlert.view.bounds.width - 50, 100)
+        var picker : UIPickerView = UIPickerView(frame: pickerFrame)
         
+        picker.delegate = self
+        picker.dataSource = self
+        
+        picker.showsSelectionIndicator = true
+        picker.selectRow(0, inComponent: 0, animated: false)
+        
+        datePickerAlert.view.addSubview(picker)
+        
+        let selectAction = UIAlertAction(title: "Select", style: .Default) { (action: UIAlertAction!) -> Void in
+            var row = picker.selectedRowInComponent(0)
+            self.selectedWeek = self.pickerArray[row]
+            self.queryForWorkouts(self.selectedWeek!)
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+        datePickerAlert.addAction(selectAction)
+        datePickerAlert.addAction(cancelAction)
+        datePickerAlert.view.tintColor = Constants.flatRed
+        self.presentViewController(datePickerAlert, animated: true, completion: nil)
         
     }
     
@@ -62,7 +85,7 @@ class GymViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     func fillPickerArray() {
         var query = GymWorkouts.query()
-        query.orderByDescending("createdAt")
+        query.orderByDescending("weekStarting")
         query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) -> Void in
             for object in objects {
                 var workout = object as GymWorkouts
@@ -159,7 +182,7 @@ class GymViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 4
+        return self.weekArray.count
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -179,7 +202,7 @@ class GymViewController: UIViewController, UITableViewDataSource, UITableViewDel
         self.checkForCompletion(workout, indexPath: indexPath)
         
         cell.workoutLabel.text = workout.workout
-        cell.repsLabel.text = workout.reps
+        cell.repsLabel.text = "Reps: " + workout.reps
         
         return cell
         
@@ -273,6 +296,27 @@ class GymViewController: UIViewController, UITableViewDataSource, UITableViewDel
         sender as UIRefreshControl
         
         sender.endRefreshing()
+    }
+    
+    // MARK : UIPickerDataSource Methods
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    // returns the # of rows in each component..
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        
+        return pickerArray.count
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+        
+        return Global.setWeekFromDate(pickerArray[row])
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
     }
 
 }
