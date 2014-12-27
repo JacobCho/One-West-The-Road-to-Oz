@@ -115,11 +115,20 @@ class NavDrawerViewController: UIViewController, UITableViewDataSource, UITableV
         
     }
     
-    func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         self.dismissViewControllerAnimated(true, completion: nil)
-        profileImageView.image = image
-        let imageFile = PFFile(data: UIImageJPEGRepresentation(image, 0.5))
+        var chosenImage: UIImage! = info[UIImagePickerControllerEditedImage] as UIImage
+        
+        UIGraphicsBeginImageContext(CGSizeMake(200, 200))
+        chosenImage.drawInRect(CGRectMake(0, 0, 200, 200))
+        var smallImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        profileImageView.image = smallImage
+        let imageFile = PFFile(data: UIImageJPEGRepresentation(smallImage, 0.5))
         currentUser.profileImage = imageFile
         currentUser.saveInBackgroundWithTarget(nil, selector: nil)
+        
     }
+    
 }
