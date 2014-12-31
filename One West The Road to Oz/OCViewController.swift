@@ -106,7 +106,7 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
     }
     
     func queryForWorkouts(weekStarting : NSDate) {
-        self.workoutsArray.removeAll()
+        self.workoutsArray.removeAll(keepCapacity: true)
         var query = OCWorkouts.query()
         query.whereKey("weekStarting", equalTo: weekStarting)
         query.orderByAscending("day")
@@ -161,12 +161,13 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         var cell : OCWorkoutsTableViewCell = tableView.dequeueReusableCellWithIdentifier("OCWorkoutCell", forIndexPath: indexPath) as OCWorkoutsTableViewCell
-        
+        if workoutsArray.count != 0 {
         var workout = workoutsArray[indexPath.row]
-        self.checkForCompletion(workout, indexPath: indexPath)
-        
-        cell.dayLabel.text = workout.day + ":"
-        cell.workoutLabel.text = workout.workout
+            self.checkForCompletion(workout, indexPath: indexPath)
+            
+            cell.dayLabel.text = workout.day + ":"
+            cell.workoutLabel.text = workout.workout
+        }
         
         return cell
         

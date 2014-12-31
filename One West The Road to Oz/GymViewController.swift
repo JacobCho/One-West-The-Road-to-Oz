@@ -51,8 +51,10 @@ class GymViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        
+        println("called")
     }
+    
+    
 
     @IBAction func weekStartingButtonPressed(sender: UIButton) {
         var datePickerAlert = UIAlertController(title: "Pick a date", message: "\n\n\n\n\n\n\n\n\n\n", preferredStyle: .ActionSheet)
@@ -131,7 +133,6 @@ class GymViewController: UIViewController, UITableViewDataSource, UITableViewDel
                     }
                     else if workout.day == "Day 2" {
                         self.day2Array!.append(workout)
-                        println(self.day2Array)
                     }
                     else if workout.day == "Day 3" {
                         self.day3Array!.append(workout)
@@ -233,6 +234,19 @@ class GymViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return false
+    }
+    
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        var sectionHeaderView = UIView(frame: CGRectMake(0, 0, self.tableView.frame.width, 30))
+        sectionHeaderView.backgroundColor = UIColor.whiteColor()
+        var sectionHeaderLabel = UILabel(frame: CGRectMake(20, 0, 100, sectionHeaderView.frame.height))
+        sectionHeaderLabel.font = UIFont.boldSystemFontOfSize(15)
+        sectionHeaderLabel.textColor = UIColor(red: 117.0/255.0, green: 117.0/255.0, blue: 117.0/255.0, alpha: 1)
+        sectionHeaderView.addSubview(sectionHeaderLabel)
+        
+        sectionHeaderLabel.text = "Day " + String(section + 1)
+        
+        return sectionHeaderView
     }
 
     // MARK: Helper Methods
