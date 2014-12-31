@@ -51,7 +51,6 @@ class GymViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        println("called")
     }
     
     
@@ -139,10 +138,15 @@ class GymViewController: UIViewController, UITableViewDataSource, UITableViewDel
                     }
                     
                 }
-
+                if self.day1Array!.count != 0 {
                 self.weekArray.append(self.day1Array!)
+                }
+                if self.day2Array!.count != 0 {
                 self.weekArray.append(self.day2Array!)
+                }
+                if self.day3Array!.count != 0 {
                 self.weekArray.append(self.day3Array!)
+                }
     
                 var thisWeek = Global.setWeekFromDate(weekStarting)
                 self.configureWeekStartingButton(thisWeek)
@@ -196,35 +200,21 @@ class GymViewController: UIViewController, UITableViewDataSource, UITableViewDel
         // Reset cell to default
         cell.completedImageView.image = nil
         cell.workoutCompleted = false
-
-        var array = weekArray[indexPath.section]
-        var workout = array[indexPath.row] as GymWorkouts
-        
-        self.checkForCompletion(workout, indexPath: indexPath)
-        
-        cell.workoutLabel.text = workout.workout
-        cell.repsLabel.text = "Reps: " + workout.reps
+        if weekArray.count != 0 {
+            var array = weekArray[indexPath.section]
+            var workout = array[indexPath.row] as GymWorkouts
+            
+            self.checkForCompletion(workout, indexPath: indexPath)
+            
+            cell.workoutLabel.text = workout.workout
+            cell.repsLabel.text = "Reps: " + workout.reps
+            
+        }
         
         return cell
         
     }
-    
-    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch section {
-        case 0:
-            return "Day 1"
-        case 1:
-            return "Day 2"
-            
-        case 2:
-            return "Day 3"
-            
-        default:
-            return "Default Section"
-            
-        }
-        
-    }
+
     
     // MARK: Table View Delegate
     
