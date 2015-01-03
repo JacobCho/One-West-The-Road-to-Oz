@@ -27,6 +27,8 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
         super.viewDidLoad()
         fillPickerArray()
         
+        self.tableView.contentInset = UIEdgeInsetsMake(0.0, 0.0, self.tabBarController!.tabBar.frame.height, 0.0)
+        
         // Fill out default workouts from latest week
         if selectedWeek == nil {
             queryForLastWorkoutDate()
