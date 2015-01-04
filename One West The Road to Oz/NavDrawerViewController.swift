@@ -34,7 +34,7 @@ class NavDrawerViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func setupProfileImage() {
-        self.profileImageView.layer.cornerRadius = self.profileImageView.frame.size.width/4
+        self.profileImageView.layer.cornerRadius = self.profileImageView.frame.size.width/3.5
         self.profileImageView.clipsToBounds = true
     }
     

@@ -239,7 +239,19 @@ class GymViewController: UIViewController, UITableViewDataSource, UITableViewDel
         sectionHeaderLabel.textColor = UIColor(red: 117.0/255.0, green: 117.0/255.0, blue: 117.0/255.0, alpha: 1)
         // Setup section header image
         var sectionHeaderImage = UIImageView(frame: CGRectMake(20, 3, 25, 25))
-        sectionHeaderImage.image = UIImage(named: "bicepIcon")
+        
+        switch section {
+            
+          case 0:
+            sectionHeaderImage.image = UIImage(named: "bicepIcon")
+          case 1:
+            sectionHeaderImage.image = UIImage(named: "bicepIcon")
+          case 2:
+            sectionHeaderImage.image = UIImage(named: "saiyanIcon")
+          default:
+            sectionHeaderImage.image = UIImage(named: "bicepIcon")
+        }
+        
         
         sectionHeaderView.addSubview(sectionHeaderImage)
         sectionHeaderView.addSubview(sectionHeaderLabel)
