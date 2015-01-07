@@ -3,17 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "workoutIcon2.png"
+      "filename" : "barbellIcon.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "workoutIcon2@2x.png"
+      "filename" : "barbellIcon@2x.png"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "workoutIcon2@3x.png"
+      "filename" : "barbellIcon@3x.png"
     }
   ],
   "info" : {

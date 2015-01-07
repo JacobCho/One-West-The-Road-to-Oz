@@ -230,22 +230,22 @@ class GymViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         // Setup section header view
-        var sectionHeaderView = UIView(frame: CGRectMake(0, 0, self.tableView.frame.width, 30))
+        let sectionHeaderView = UIView(frame: CGRectMake(0, 0, self.tableView.frame.width, 40))
         sectionHeaderView.backgroundColor = UIColor.whiteColor()
         sectionHeaderView.alpha = 0.9
         // Setup section header label
-        var sectionHeaderLabel = UILabel(frame: CGRectMake(50, 0, 100, sectionHeaderView.frame.height))
+        let sectionHeaderLabel = UILabel(frame: CGRectMake(55, 0, 100, sectionHeaderView.frame.height))
         sectionHeaderLabel.font = UIFont.boldSystemFontOfSize(15)
         sectionHeaderLabel.textColor = UIColor(red: 117.0/255.0, green: 117.0/255.0, blue: 117.0/255.0, alpha: 1)
         // Setup section header image
-        var sectionHeaderImage = UIImageView(frame: CGRectMake(20, 3, 25, 25))
+        let sectionHeaderImage = UIImageView(frame: CGRectMake(20, 5, 30, 30))
         
         switch section {
             
           case 0:
             sectionHeaderImage.image = UIImage(named: "bicepIcon")
           case 1:
-            sectionHeaderImage.image = UIImage(named: "bicepIcon")
+            sectionHeaderImage.image = UIImage(named: "barbellIcon")
           case 2:
             sectionHeaderImage.image = UIImage(named: "saiyanIcon")
           default:
