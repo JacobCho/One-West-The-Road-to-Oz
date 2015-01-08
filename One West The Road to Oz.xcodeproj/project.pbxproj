@@ -27,6 +27,8 @@
 		52296D8C1A3130E40078919E /* OCWorkoutsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52296D8B1A3130E40078919E /* OCWorkoutsTableViewCell.swift */; };
 		52296D921A36D8560078919E /* WorkoutsTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52296D911A36D8560078919E /* WorkoutsTabBarController.swift */; };
 		523AB8711A2EC55D005C7A66 /* CenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523AB8701A2EC55D005C7A66 /* CenterViewController.swift */; };
+		525527D01A5DE13F00CDBCB4 /* PointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525527CF1A5DE13F00CDBCB4 /* PointsViewController.swift */; };
+		525527D21A5DE1B200CDBCB4 /* PointsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525527D11A5DE1B200CDBCB4 /* PointsTableViewCell.swift */; };
 		527483141A37BEB500C51315 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527483131A37BEB500C51315 /* LoginViewController.swift */; };
 		527483161A3924D200C51315 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527483151A3924D200C51315 /* Global.swift */; };
 		52814F201A2D7C8A00835680 /* NavDrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52814F1F1A2D7C8A00835680 /* NavDrawerViewController.swift */; };
@@ -39,7 +41,6 @@
 		52FC39AB1A30F90800B56BE9 /* OCWorkouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FC39AA1A30F90800B56BE9 /* OCWorkouts.swift */; };
 		52FC39AD1A30FC1E00B56BE9 /* GymViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FC39AC1A30FC1E00B56BE9 /* GymViewController.swift */; };
 		52FC39AF1A30FC4000B56BE9 /* OCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FC39AE1A30FC4000B56BE9 /* OCViewController.swift */; };
-		52FC39B11A30FCA100B56BE9 /* PointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FC39B01A30FCA100B56BE9 /* PointsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,8 @@
 		52296D8B1A3130E40078919E /* OCWorkoutsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCWorkoutsTableViewCell.swift; sourceTree = "<group>"; };
 		52296D911A36D8560078919E /* WorkoutsTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutsTabBarController.swift; sourceTree = "<group>"; };
 		523AB8701A2EC55D005C7A66 /* CenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterViewController.swift; sourceTree = "<group>"; };
+		525527CF1A5DE13F00CDBCB4 /* PointsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointsViewController.swift; sourceTree = "<group>"; };
+		525527D11A5DE1B200CDBCB4 /* PointsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointsTableViewCell.swift; sourceTree = "<group>"; };
 		527483131A37BEB500C51315 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		527483151A3924D200C51315 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		52814F171A2D7B6800835680 /* One West The Road to Oz-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "One West The Road to Oz-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -97,7 +100,6 @@
 		52FC39AA1A30F90800B56BE9 /* OCWorkouts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCWorkouts.swift; sourceTree = "<group>"; };
 		52FC39AC1A30FC1E00B56BE9 /* GymViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GymViewController.swift; sourceTree = "<group>"; };
 		52FC39AE1A30FC4000B56BE9 /* OCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCViewController.swift; sourceTree = "<group>"; };
-		52FC39B01A30FCA100B56BE9 /* PointsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointsViewController.swift; sourceTree = "<group>"; };
 		E2496CFBCBECEE7E2DB15688 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F6E89D6C054EFA2E5FFD5C3B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -246,6 +248,7 @@
 				5213D1871A2D2B8B00BF5098 /* Main.storyboard */,
 				52814F241A2D829600835680 /* NavDrawerTableCell.swift */,
 				52296D8B1A3130E40078919E /* OCWorkoutsTableViewCell.swift */,
+				525527D11A5DE1B200CDBCB4 /* PointsTableViewCell.swift */,
 				52FAE9F31A4398F900427DA1 /* GymWorkoutsTableViewCell.swift */,
 			);
 			name = Views;
@@ -254,8 +257,8 @@
 		52814F231A2D7CA000835680 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				525527CF1A5DE13F00CDBCB4 /* PointsViewController.swift */,
 				527483131A37BEB500C51315 /* LoginViewController.swift */,
-				52FC39B01A30FCA100B56BE9 /* PointsViewController.swift */,
 				52FC39AE1A30FC4000B56BE9 /* OCViewController.swift */,
 				52296D911A36D8560078919E /* WorkoutsTabBarController.swift */,
 				52FC39AC1A30FC1E00B56BE9 /* GymViewController.swift */,
@@ -402,6 +405,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				527483141A37BEB500C51315 /* LoginViewController.swift in Sources */,
+				525527D01A5DE13F00CDBCB4 /* PointsViewController.swift in Sources */,
+				525527D21A5DE1B200CDBCB4 /* PointsTableViewCell.swift in Sources */,
 				52296D921A36D8560078919E /* WorkoutsTabBarController.swift in Sources */,
 				52FC39A91A30F4F900B56BE9 /* GymWorkouts.swift in Sources */,
 				52FC39AD1A30FC1E00B56BE9 /* GymViewController.swift in Sources */,
@@ -410,7 +415,6 @@
 				52814F251A2D829600835680 /* NavDrawerTableCell.swift in Sources */,
 				52FAE9F41A4398F900427DA1 /* GymWorkoutsTableViewCell.swift in Sources */,
 				52FC39AB1A30F90800B56BE9 /* OCWorkouts.swift in Sources */,
-				52FC39B11A30FCA100B56BE9 /* PointsViewController.swift in Sources */,
 				5211A64C1A2D92A2005CB6F2 /* ContainerViewController.swift in Sources */,
 				523AB8711A2EC55D005C7A66 /* CenterViewController.swift in Sources */,
 				5213D1821A2D2B8B00BF5098 /* AppDelegate.swift in Sources */,

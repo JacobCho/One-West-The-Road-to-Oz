@@ -19,5 +19,10 @@ class User: PFUser, PFSubclassing {
     @NSManaged var ocPoints : Int
     @NSManaged var practicePoints : Int
     @NSManaged var profileImage: PFFile?
+
+    func getTotalPoints() -> Double {
+        
+        return Double(self.gymPoints) + Double(self.ocPoints)
+    }
     
 }
