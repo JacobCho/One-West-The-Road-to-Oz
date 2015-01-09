@@ -29,7 +29,11 @@ class PointsViewController: UIViewController, UITableViewDataSource, UITableView
     // MARK: Table View Data Source
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if paddlersArray.count > 5 {
+            return 5
+        } else {
         return paddlersArray.count
+        }
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -46,23 +50,11 @@ class PointsViewController: UIViewController, UITableViewDataSource, UITableView
             cell.userProfileImageView.loadInBackground(nil)
             
         }
-        let pointsLeaderMaxBarWidth = cell.frame.width - 100
-        var pointsBar = UIView()
-        pointsBar.frame = CGRect(x: 60, y: 15, width: 0, height: 25)
-        pointsBar.backgroundColor = Constants.flatRed
-        cell.addSubview(pointsBar)
         
-        if indexPath.row == 0 {
-            UIView.animateWithDuration(1.0, animations: { () -> Void in
-                pointsBar.frame = CGRect(x: 60, y: 15, width: pointsLeaderMaxBarWidth, height: 25)
-            })
-        } else {
-            let percentFromLeader : Double = paddler.getTotalPoints()/self.paddlersArray[0].getTotalPoints()
-            let barWidth : CGFloat = CGFloat(percentFromLeader) * CGFloat(pointsLeaderMaxBarWidth)
-            UIView.animateWithDuration(1.0, animations: { () -> Void in
-                pointsBar.frame = CGRect(x: 60, y: 15, width: barWidth, height: 25)
-            })
-        }
+        let percentFromLeader : Double = paddler.getTotalPoints()/self.paddlersArray[0].getTotalPoints()
+        let barWidth : CGFloat = CGFloat(percentFromLeader) * CGFloat(cell.pointsLeaderMaxBarWidth!)
+        
+        cell.animatePointsBar(indexPath, barWidth: barWidth)
         
         return cell
         

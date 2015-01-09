@@ -13,11 +13,36 @@ class PointsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var userProfileImageView: PFImageView!
     @IBOutlet weak var userNameLabel: UILabel!
-    @IBOutlet weak var pointsBar: UIView!
+    var pointsBar = UIView()
+    var pointsLeaderMaxBarWidth : CGFloat?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         self.userProfileImageView.layer.cornerRadius = 17
         self.userProfileImageView.clipsToBounds = true
+        pointsLeaderMaxBarWidth = self.frame.width - 100
+        self.setUpPointsBar()
     }
+    
+    func setUpPointsBar() {
+        
+        
+        self.pointsBar.frame = CGRect(x: 60, y: 15, width: 0, height: 25)
+        self.pointsBar.backgroundColor = Constants.flatRed
+        self.addSubview(pointsBar)
+    }
+    
+    func animatePointsBar(indexPath: NSIndexPath, barWidth: CGFloat) {
+        if indexPath.row == 0 {
+            UIView.animateWithDuration(1.0, animations: { () -> Void in
+                self.pointsBar.frame = CGRect(x: 60, y: 15, width: self.pointsLeaderMaxBarWidth!, height: 25)
+            })
+        } else {
+            
+            UIView.animateWithDuration(1.0, animations: { () -> Void in
+                self.pointsBar.frame = CGRect(x: 60, y: 15, width: barWidth, height: 25)
+            })
+        }
+    }
+    
 }
