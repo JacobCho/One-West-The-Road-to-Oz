@@ -32,7 +32,7 @@ class PointsViewController: UIViewController, UITableViewDataSource, UITableView
         if paddlersArray.count > 5 {
             return 5
         } else {
-        return paddlersArray.count
+            return paddlersArray.count
         }
     }
     
@@ -55,9 +55,15 @@ class PointsViewController: UIViewController, UITableViewDataSource, UITableView
         let barWidth : CGFloat = CGFloat(percentFromLeader) * CGFloat(cell.pointsLeaderMaxBarWidth!)
         
         cell.animatePointsBar(indexPath, barWidth: barWidth)
-        
+        cell.setupPointsLabel(Int(paddler.getTotalPoints()))
         return cell
         
+    }
+    
+    // MARK: Table View Delegate 
+    
+    func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return false
     }
     
     // MARK: Parse Methods

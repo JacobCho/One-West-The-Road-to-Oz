@@ -807,7 +807,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="o7w-L6-Cp9">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="o7w-L6-Cp9">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -861,6 +861,15 @@
                                                         </mask>
                                                     </variation>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q57-Yz-EQ2">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.45882352939999999" green="0.45882352939999999" blue="0.45882352939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="350" y="0.0" width="50" height="60"/>
+                                                    </variation>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="OzA-7M-shB" firstAttribute="top" secondItem="AJV-sJ-NLT" secondAttribute="topMargin" id="38i-TM-v3u"/>
@@ -876,6 +885,7 @@
                                                 <mask key="subviews">
                                                     <exclude reference="OzA-7M-shB"/>
                                                     <exclude reference="jtT-n5-fab"/>
+                                                    <exclude reference="Q57-Yz-EQ2"/>
                                                 </mask>
                                                 <mask key="constraints">
                                                     <exclude reference="38i-TM-v3u"/>
@@ -888,6 +898,7 @@
                                                 <mask key="subviews">
                                                     <include reference="OzA-7M-shB"/>
                                                     <include reference="jtT-n5-fab"/>
+                                                    <include reference="Q57-Yz-EQ2"/>
                                                 </mask>
                                                 <mask key="constraints">
                                                     <include reference="38i-TM-v3u"/>
@@ -898,6 +909,7 @@
                                             </variation>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="pointsLabel" destination="Q57-Yz-EQ2" id="lKd-N0-fDW"/>
                                             <outlet property="userNameLabel" destination="jtT-n5-fab" id="0lW-pi-pv8"/>
                                             <outlet property="userProfileImageView" destination="OzA-7M-shB" id="juV-1w-NfX"/>
                                         </connections>
