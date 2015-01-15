@@ -10,6 +10,8 @@ import UIKit
 import Parse
 
 class PointsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    var currentUser : User = User.currentUser()
 
     @IBOutlet weak var tableView: UITableView!
     var paddlersArray : [User] = []
@@ -17,12 +19,15 @@ class PointsViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
+        
         // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         self.fillPaddlersArray()
+        self.setupPieChart()
     }
 
     
@@ -79,6 +84,22 @@ class PointsViewController: UIViewController, UITableViewDataSource, UITableView
                 println(error)
             }
         }
+    }
+    
+    // MARK: Helper Methods
+    
+    func setupPieChart() {
+        var pieChartItemOC : PNPieChartDataItem = PNPieChartDataItem(value: CGFloat(currentUser.ocPoints), color: Constants.flatBlue, description: "OC Points: \(currentUser.ocPoints)")
+        var pieChartItemGym : PNPieChartDataItem = PNPieChartDataItem(value: CGFloat(currentUser.gymPoints), color: Constants.flatGreen, description: "Gym Points: \(currentUser.gymPoints)")
+        
+        var items : NSArray = [pieChartItemOC, pieChartItemGym]
+        
+        var pieChart : PNPieChart = PNPieChart(frame: CGRectMake(self.view.frame.width/2 - 100, self.view.frame.height/2, 200, 200), items: items)
+        pieChart.descriptionTextColor = UIColor.whiteColor()
+        pieChart.descriptionTextFont = UIFont(name: "Avenir-Medium", size: 14.0)
+        pieChart.strokeChart()
+        
+        self.view.addSubview(pieChart)
     }
 
 }

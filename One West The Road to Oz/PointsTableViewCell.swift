@@ -21,7 +21,7 @@ class PointsTableViewCell: UITableViewCell {
         super.awakeFromNib()
         self.userProfileImageView.layer.cornerRadius = 17
         self.userProfileImageView.clipsToBounds = true
-        pointsLeaderMaxBarWidth = self.frame.width - 50
+        pointsLeaderMaxBarWidth = UIScreen.mainScreen().bounds.size.width * 0.60
         self.setUpPointsBar()
     }
     

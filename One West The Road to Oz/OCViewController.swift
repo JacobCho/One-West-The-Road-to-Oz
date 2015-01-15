@@ -163,6 +163,9 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         var cell : OCWorkoutsTableViewCell = tableView.dequeueReusableCellWithIdentifier("OCWorkoutCell", forIndexPath: indexPath) as OCWorkoutsTableViewCell
+        // Reset cell to default
+        cell.completedImageView.image = nil
+        cell.workoutCompleted = false
         if workoutsArray.count != 0 {
         var workout = workoutsArray[indexPath.row]
             self.checkForCompletion(workout, indexPath: indexPath)

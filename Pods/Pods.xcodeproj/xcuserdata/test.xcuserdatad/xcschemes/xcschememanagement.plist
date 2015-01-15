@@ -4,7 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-PNChart.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-SCLAlertView-Objective-C.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-UICountingLabel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>19548FCD1523EAED897AB88F</key>
+		<key>00998ED019C26F85F26B041A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E087F48FDFBBBD5BEF17AC29</key>
+		<key>2E78718AA33C64DD8D83B183</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>40ABC85E0685CF1E804DB799</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7CEF371EB8E1292A732D1E4D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

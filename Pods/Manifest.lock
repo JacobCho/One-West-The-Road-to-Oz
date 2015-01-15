@@ -1,10 +1,16 @@
 PODS:
+  - PNChart (0.7.5):
+    - UICountingLabel (~> 1.0.0)
   - SCLAlertView-Objective-C (0.3.5)
+  - UICountingLabel (1.0.0)
 
 DEPENDENCIES:
+  - PNChart
   - SCLAlertView-Objective-C (~> 0.3.4)
 
 SPEC CHECKSUMS:
+  PNChart: 18d4c57f43df3357ab14b3847a930f36d1fbce48
   SCLAlertView-Objective-C: ba283f4d609d9929d4d2bf66f713db19ae0fe066
+  UICountingLabel: 0a0e9e34bf4690dbd127aaec552d19ed938087a9
 
 COCOAPODS: 0.34.4

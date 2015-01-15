@@ -272,7 +272,6 @@ class GymViewController: UIViewController, UITableViewDataSource, UITableViewDel
     }
     func setUpPointsLabel() {
         self.pointsLabel.text = "Points: " + String(self.currentUser.gymPoints)
-        println(self.currentUser.gymPoints)
     }
     
     func configureWeekStartingButton(currentWeek : String) {

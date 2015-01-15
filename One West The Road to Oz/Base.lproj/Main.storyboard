@@ -863,16 +863,31 @@
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q57-Yz-EQ2">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="M4q-vP-oEd"/>
+                                                        <constraint firstAttribute="width" constant="50" id="RTA-Cm-z7v"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" red="0.45882352939999999" green="0.45882352939999999" blue="0.45882352939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
-                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="M4q-vP-oEd"/>
+                                                            <exclude reference="RTA-Cm-z7v"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                                         <rect key="frame" x="350" y="0.0" width="50" height="60"/>
+                                                        <mask key="constraints">
+                                                            <include reference="M4q-vP-oEd"/>
+                                                            <include reference="RTA-Cm-z7v"/>
+                                                        </mask>
                                                     </variation>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="OzA-7M-shB" firstAttribute="top" secondItem="AJV-sJ-NLT" secondAttribute="topMargin" id="38i-TM-v3u"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Q57-Yz-EQ2" secondAttribute="trailing" id="Cvl-2x-yzc"/>
                                                 <constraint firstItem="jtT-n5-fab" firstAttribute="top" secondItem="OzA-7M-shB" secondAttribute="bottom" constant="-1" id="MWt-kh-gta"/>
                                                 <constraint firstItem="jtT-n5-fab" firstAttribute="leading" secondItem="AJV-sJ-NLT" secondAttribute="leadingMargin" constant="-4" id="XAc-x4-snK">
                                                     <variation key="widthClass=compact" constant="8"/>
@@ -888,10 +903,11 @@
                                                     <exclude reference="Q57-Yz-EQ2"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <exclude reference="38i-TM-v3u"/>
-                                                    <exclude reference="y2d-sM-Alb"/>
+                                                    <exclude reference="Cvl-2x-yzc"/>
                                                     <exclude reference="MWt-kh-gta"/>
                                                     <exclude reference="XAc-x4-snK"/>
+                                                    <exclude reference="38i-TM-v3u"/>
+                                                    <exclude reference="y2d-sM-Alb"/>
                                                 </mask>
                                             </variation>
                                             <variation key="widthClass=compact">
@@ -901,10 +917,11 @@
                                                     <include reference="Q57-Yz-EQ2"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <include reference="38i-TM-v3u"/>
-                                                    <include reference="y2d-sM-Alb"/>
+                                                    <include reference="Cvl-2x-yzc"/>
                                                     <include reference="MWt-kh-gta"/>
                                                     <include reference="XAc-x4-snK"/>
+                                                    <include reference="38i-TM-v3u"/>
+                                                    <include reference="y2d-sM-Alb"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -1117,7 +1134,8 @@
                                                                     <exclude reference="YH3-FR-QgD"/>
                                                                 </mask>
                                                             </variation>
-                                                            <variation key="widthClass=compact">
+                                                            <variation key="widthClass=compact" misplaced="YES">
+                                                                <rect key="frame" x="217" y="34" width="35" height="35"/>
                                                                 <mask key="constraints">
                                                                     <include reference="7xl-RC-FQe"/>
                                                                     <include reference="YH3-FR-QgD"/>
@@ -1129,6 +1147,9 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                             <color key="textColor" red="0.45882352941176469" green="0.45882352941176469" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
+                                                            <variation key="widthClass=compact" misplaced="YES">
+                                                                <rect key="frame" x="8" y="8" width="189" height="16"/>
+                                                            </variation>
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1169,7 +1190,8 @@
                                                             <exclude reference="zHh-M7-eYC"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="widthClass=compact">
+                                                    <variation key="widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="30" y="8" width="260" height="102"/>
                                                         <mask key="subviews">
                                                             <include reference="vtn-aw-82V"/>
                                                             <include reference="0EX-RA-HPB"/>
