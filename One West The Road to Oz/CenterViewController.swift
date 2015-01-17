@@ -14,14 +14,16 @@ protocol CenterViewControllerDelegate {
 
 }
 
-class CenterViewController: UIViewController {
+class CenterViewController: UIViewController, NavDrawerViewControllerDelegate {
     
     var delegate : CenterViewControllerDelegate?
-
+    var navDrawerViewController : NavDrawerViewController!
 
     @IBOutlet weak var containerView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         var navBarButton = UIBarButtonItem(image: UIImage(named: "HamburgerIcon"), style: UIBarButtonItemStyle.Plain, target: self, action: "navDrawerButtonPressed:")
         navigationItem.leftBarButtonItem = navBarButton
        
@@ -29,6 +31,24 @@ class CenterViewController: UIViewController {
     @IBAction func navDrawerButtonPressed(sender: UIBarButtonItem) {
         delegate?.toggleLeftPanel?()
     }
+    
+    // MARK: NavDrawerViewController Delegate Methods
+    
+    func goToWorkouts() {
 
+        delegate?.toggleLeftPanel?()
+    }
+    
+    func goToInfo() {
+        delegate?.toggleLeftPanel?()
+    }
+    
+    func goToResults() {
+        delegate?.toggleLeftPanel?()
+    }
+    
+    func goToSettings() {
+        delegate?.toggleLeftPanel?()
+    }
 
 }

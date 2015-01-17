@@ -80,6 +80,7 @@ class ContainerViewController: UIViewController, CenterViewControllerDelegate, U
     }
     
     func addNavDrawerController(navDrawerController : NavDrawerViewController) {
+        navDrawerController.delegate = centerViewController
         view.insertSubview(navDrawerController.view, atIndex: 0)
         
         

@@ -9,6 +9,15 @@
 import UIKit
 import Parse
 
+@objc
+protocol NavDrawerViewControllerDelegate {
+    func goToWorkouts()
+    func goToInfo()
+    func goToResults()
+    func goToSettings()
+    
+}
+
 class NavDrawerViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     let currentUser = User.currentUser()
     @IBOutlet weak var profileImageView: PFImageView!
@@ -17,9 +26,11 @@ class NavDrawerViewController: UIViewController, UITableViewDataSource, UITableV
     
     var navArray : Array<String> = ["Workouts", "Information", "TT Results", "Settings"]
     var iconArray :Array<UIImage>?
+    var delegate : NavDrawerViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         setupProfileImage()
         setupIcons()
     }
@@ -74,11 +85,22 @@ class NavDrawerViewController: UIViewController, UITableViewDataSource, UITableV
     // Mark: Table View Delegate
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-
+        switch indexPath.row {
+            case 0:
+                self.delegate?.goToWorkouts()
+            case 1:
+                self.delegate?.goToInfo()
+            case 2:
+                self.delegate?.goToResults()
+            case 3:
+                self.delegate?.goToSettings()
+            default:
+                println(indexPath.row)
+        }
     }
     
     func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return false
+        return true
     }
     
     // Mark: Photo picker methods
