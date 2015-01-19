@@ -12,6 +12,7 @@ import Parse
 class PointsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var currentUser : User = User.currentUser()
+
     var pieChart : PNPieChart?
 
     @IBOutlet weak var tableView: UITableView!
@@ -29,6 +30,8 @@ class PointsViewController: UIViewController, UITableViewDataSource, UITableView
         super.viewDidAppear(animated)
         self.fillPaddlersArray()
         self.setupPieChart()
+
+        
     }
 
     
@@ -95,48 +98,46 @@ class PointsViewController: UIViewController, UITableViewDataSource, UITableView
         
         let items : NSArray = [pieChartItemOC, pieChartItemGym]
         
-        let height : CGFloat = self.view.frame.width/2
-        let width : CGFloat = height
-        let xPos = ((self.view.frame.width/2) - (height/2))
-        let yPos = self.view.frame.height/2
+        
         
         if let chart = self.pieChart {
             chart.removeFromSuperview()
             
-            self.pieChart = PNPieChart(frame: CGRectMake(xPos, yPos, width, height), items: items)
-            self.pieChart!.setTranslatesAutoresizingMaskIntoConstraints(false)
-            self.pieChart!.descriptionTextColor = UIColor.whiteColor()
-            self.pieChart!.descriptionTextFont = UIFont(name: "Avenir-Medium", size: 14.0)
-            self.pieChart!.strokeChart()
-            
-            self.view.addSubview(self.pieChart!)
-            
-//            self.view.addConstraint(NSLayoutConstraint(item: self.pieChart!, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Width, multiplier: 0.5, constant: 0))
-//            
-//            self.view.addConstraint(NSLayoutConstraint(item: self.pieChart!, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Height, multiplier: 0.25, constant: 0))
-//            
-//            self.view.addConstraint(NSLayoutConstraint(item: self.pieChart!, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.CenterX, multiplier: 1.0, constant: 0))
-//            
-//            self.view.addConstraint(NSLayoutConstraint(item: self.pieChart!, attribute: NSLayoutAttribute.TopMargin, relatedBy: NSLayoutRelation.Equal, toItem: self.tableView, attribute: NSLayoutAttribute.BottomMargin, multiplier: 1.0, constant: 10))
+            self.drawPieChart(items)
             
         } else {
         
+            self.drawPieChart(items)
+            
+
+        }
+
+    }
+    
+    
+    func drawPieChart(items: NSArray) {
+        var height : CGFloat = self.view.frame.height - self.tableView.frame.height - 80
+        var width : CGFloat = height
+        var xPos = ((self.view.frame.width/2) - (height/2))
+        var yPos = self.tableView.frame.height + 20
+        
+        if self.view.frame.height > 600 {
+            height = self.view.frame.height - self.tableView.frame.height - 150
+            width = height
+            xPos = ((self.view.frame.width/2) - (height/2))
+            yPos = self.tableView.frame.height + 50
+        }
+        
         self.pieChart = PNPieChart(frame: CGRectMake(xPos, yPos, width, height), items: items)
-            self.pieChart!.setTranslatesAutoresizingMaskIntoConstraints(false)
         self.pieChart!.descriptionTextColor = UIColor.whiteColor()
         self.pieChart!.descriptionTextFont = UIFont(name: "Avenir-Medium", size: 14.0)
         self.pieChart!.strokeChart()
         
         self.view.addSubview(self.pieChart!)
-            
-//            self.view.addConstraint(NSLayoutConstraint(item: self.pieChart!, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Width, multiplier: 0.5, constant: 0))
-//            
-//            self.view.addConstraint(NSLayoutConstraint(item: self.pieChart!, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Height, multiplier: 0.25, constant: 0))
-//            
-//            self.view.addConstraint(NSLayoutConstraint(item: self.pieChart!, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.CenterX, multiplier: 1.0, constant: 0))
-//            
-//            self.view.addConstraint(NSLayoutConstraint(item: self.pieChart!, attribute: NSLayoutAttribute.TopMargin, relatedBy: NSLayoutRelation.Equal, toItem: self.tableView, attribute: NSLayoutAttribute.BottomMargin, multiplier: 1.0, constant: 10))
-        }
+        
+        
+        
+        
     }
 
 }
