@@ -33,13 +33,26 @@ class PointsTableViewCell: UITableViewCell {
     func animatePointsBar(indexPath: NSIndexPath, barWidth: CGFloat) {
         setupPointsBarColour(indexPath)
         if indexPath.row == 0 {
-            UIView.animateWithDuration(1.0, animations: { () -> Void in
+            UIView.animateWithDuration(1.0, animations: {
                 self.pointsBar.frame = CGRect(x: 60, y: 15, width: self.pointsLeaderMaxBarWidth!, height: 25)
+                }, completion: {
+                    (value: Bool) in
+                    UIView.animateWithDuration(1.0, animations: { () -> Void in
+                        self.pointsBar.layer.shadowOpacity = 0.3
+                        self.pointsBar.layer.shadowOffset = CGSizeMake(0, 5.0)
+                    })
             })
+
         } else {
-            
-            UIView.animateWithDuration(1.0, animations: { () -> Void in
+            UIView.animateWithDuration(1.0, animations: {
                 self.pointsBar.frame = CGRect(x: 60, y: 15, width: barWidth, height: 25)
+                }, completion: {
+                    (value: Bool) in
+                    UIView.animateWithDuration(1.0, animations: { () -> Void in
+                        self.pointsBar.layer.shadowOpacity = 0.3
+                        self.pointsBar.layer.shadowOffset = CGSizeMake(0, 5.0)
+                    })
+                   
             })
         }
     }
