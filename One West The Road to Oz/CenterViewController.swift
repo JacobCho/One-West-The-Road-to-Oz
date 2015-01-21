@@ -20,26 +20,49 @@ class CenterViewController: UIViewController, NavDrawerViewControllerDelegate {
     var navDrawerViewController : NavDrawerViewController!
 
     @IBOutlet weak var containerView: UIView!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         var navBarButton = UIBarButtonItem(image: UIImage(named: "HamburgerIcon"), style: UIBarButtonItemStyle.Plain, target: self, action: "navDrawerButtonPressed:")
         navigationItem.leftBarButtonItem = navBarButton
+        
+
        
     }
     @IBAction func navDrawerButtonPressed(sender: UIBarButtonItem) {
         delegate?.toggleLeftPanel?()
     }
     
+    func displayContentController(content: UIViewController) {
+        self.addChildViewController(content)
+        content.view.frame = self.containerView.frame
+        self.view.addSubview(content.view)
+        content.didMoveToParentViewController(self)
+        
+    }
+    
+    func hideContentController(content: UIViewController) {
+        content.willMoveToParentViewController(nil)
+        content.view.removeFromSuperview()
+        content.removeFromParentViewController()
+        
+    }
+    
     // MARK: NavDrawerViewController Delegate Methods
     
     func goToWorkouts() {
-
+        let workoutsTabVC = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("WorkoutsTabBarController") as UIViewController
+        self.displayContentController(workoutsTabVC)
+        self.hideContentController(self.childViewControllers[0] as UIViewController)
         delegate?.toggleLeftPanel?()
     }
     
     func goToInfo() {
+        let infoVC = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("InfoViewController") as UIViewController
+        self.displayContentController(infoVC)
+        self.hideContentController(self.childViewControllers[0] as UIViewController)
         delegate?.toggleLeftPanel?()
     }
     
@@ -50,5 +73,6 @@ class CenterViewController: UIViewController, NavDrawerViewControllerDelegate {
     func goToSettings() {
         delegate?.toggleLeftPanel?()
     }
+    
 
 }
