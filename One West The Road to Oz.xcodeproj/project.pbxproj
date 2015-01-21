@@ -35,6 +35,7 @@
 		52814F251A2D829600835680 /* NavDrawerTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52814F241A2D829600835680 /* NavDrawerTableCell.swift */; };
 		52814F271A2D82B100835680 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52814F261A2D82B100835680 /* User.swift */; };
 		52ACA1FD1A6E12DB0068A83F /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ACA1FC1A6E12DB0068A83F /* InfoViewController.swift */; };
+		52ACA1FF1A6F3D6D0068A83F /* StoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ACA1FE1A6F3D6D0068A83F /* StoryboardExtension.swift */; };
 		52FAE9EB1A3CFE7B00427DA1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52FAE9EA1A3CFE7B00427DA1 /* Parse.framework */; };
 		52FAE9ED1A3CFE8C00427DA1 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52FAE9EC1A3CFE8C00427DA1 /* Bolts.framework */; };
 		52FAE9F41A4398F900427DA1 /* GymWorkoutsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FAE9F31A4398F900427DA1 /* GymWorkoutsTableViewCell.swift */; };
@@ -90,6 +91,7 @@
 		52814F241A2D829600835680 /* NavDrawerTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavDrawerTableCell.swift; sourceTree = "<group>"; };
 		52814F261A2D82B100835680 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		52ACA1FC1A6E12DB0068A83F /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		52ACA1FE1A6F3D6D0068A83F /* StoryboardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardExtension.swift; sourceTree = "<group>"; };
 		52FAE9E21A3A565C00427DA1 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = "../parse-library-1.6.0/ParseCrashReporting.framework"; sourceTree = "<group>"; };
 		52FAE9E61A3CFD9000427DA1 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
 		52FAE9E81A3CFDA300427DA1 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -267,6 +269,7 @@
 				523AB8701A2EC55D005C7A66 /* CenterViewController.swift */,
 				52ACA1FC1A6E12DB0068A83F /* InfoViewController.swift */,
 				5211A64B1A2D92A2005CB6F2 /* ContainerViewController.swift */,
+				52ACA1FE1A6F3D6D0068A83F /* StoryboardExtension.swift */,
 				52814F1F1A2D7C8A00835680 /* NavDrawerViewController.swift */,
 			);
 			name = Controllers;
@@ -416,6 +419,7 @@
 				52FC39AD1A30FC1E00B56BE9 /* GymViewController.swift in Sources */,
 				52814F271A2D82B100835680 /* User.swift in Sources */,
 				527483161A3924D200C51315 /* Global.swift in Sources */,
+				52ACA1FF1A6F3D6D0068A83F /* StoryboardExtension.swift in Sources */,
 				52814F251A2D829600835680 /* NavDrawerTableCell.swift in Sources */,
 				52FAE9F41A4398F900427DA1 /* GymWorkoutsTableViewCell.swift in Sources */,
 				52FC39AB1A30F90800B56BE9 /* OCWorkouts.swift in Sources */,

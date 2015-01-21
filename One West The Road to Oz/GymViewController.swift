@@ -32,8 +32,6 @@ class GymViewController: UIViewController, UITableViewDataSource, UITableViewDel
         self.setUpPointsLabel()
         self.fillPickerArray()
         
-        self.tableView.contentInset = UIEdgeInsetsMake(0.0, 0.0, self.tabBarController!.tabBar.frame.height, 0.0)
-        
         if selectedWeek == nil {
             self.queryForLastWorkoutDate()
             self.day1Array = []

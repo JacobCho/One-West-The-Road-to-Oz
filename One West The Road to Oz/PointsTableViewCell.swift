@@ -63,7 +63,7 @@ class PointsTableViewCell: UITableViewCell {
     }
     
     func setupPointsLabel(paddlerPoints: Int) {
-        self.pointsLabel.text = String(paddlerPoints)
+        self.pointsLabel.text = String(paddlerPoints) + "pts"
         UIView.animateWithDuration(1.0, animations: { () -> Void in
             self.pointsLabel.alpha = 1.0
         })

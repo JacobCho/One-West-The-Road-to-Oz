@@ -27,10 +27,8 @@ class CenterViewController: UIViewController, NavDrawerViewControllerDelegate {
         
         var navBarButton = UIBarButtonItem(image: UIImage(named: "HamburgerIcon"), style: UIBarButtonItemStyle.Plain, target: self, action: "navDrawerButtonPressed:")
         navigationItem.leftBarButtonItem = navBarButton
-        
-
-       
     }
+    
     @IBAction func navDrawerButtonPressed(sender: UIBarButtonItem) {
         delegate?.toggleLeftPanel?()
     }
@@ -53,14 +51,14 @@ class CenterViewController: UIViewController, NavDrawerViewControllerDelegate {
     // MARK: NavDrawerViewController Delegate Methods
     
     func goToWorkouts() {
-        let workoutsTabVC = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("WorkoutsTabBarController") as UIViewController
+        let workoutsTabVC = UIStoryboard.workoutsTabBarController()
         self.displayContentController(workoutsTabVC)
         self.hideContentController(self.childViewControllers[0] as UIViewController)
         delegate?.toggleLeftPanel?()
     }
     
     func goToInfo() {
-        let infoVC = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("InfoViewController") as UIViewController
+        let infoVC = UIStoryboard.infoViewController()
         self.displayContentController(infoVC)
         self.hideContentController(self.childViewControllers[0] as UIViewController)
         delegate?.toggleLeftPanel?()
