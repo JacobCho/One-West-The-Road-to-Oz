@@ -997,24 +997,9 @@
                                     <outlet property="delegate" destination="zDp-hW-7PA" id="JeQ-Rd-3ZK"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Points:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Hv-yE-i5A">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" red="0.45882352939999999" green="0.45882352939999999" blue="0.45882352939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="21" y="311" width="93" height="21"/>
-                                </variation>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="4Hv-yE-i5A" firstAttribute="top" secondItem="o7w-L6-Cp9" secondAttribute="bottom" constant="10" id="0NH-FN-IeX">
-                                <variation key="widthClass=compact" constant="11"/>
-                            </constraint>
-                            <constraint firstItem="4Hv-yE-i5A" firstAttribute="leading" secondItem="Yf1-ba-ydn" secondAttribute="leadingMargin" constant="10" id="6Fj-Ik-ge2">
-                                <variation key="widthClass=compact" constant="5"/>
-                            </constraint>
                             <constraint firstItem="o7w-L6-Cp9" firstAttribute="top" secondItem="Dra-4g-Zbh" secondAttribute="bottom" constant="20" id="6yL-Qs-UrE">
                                 <variation key="widthClass=compact" constant="0.0"/>
                             </constraint>
@@ -1030,7 +1015,6 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="o7w-L6-Cp9"/>
-                                <exclude reference="4Hv-yE-i5A"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="6yL-Qs-UrE"/>
@@ -1038,14 +1022,11 @@
                                 <exclude reference="oYN-Ld-0e5"/>
                                 <exclude reference="tQn-Ca-WP0"/>
                                 <exclude reference="u8y-mp-Cmx"/>
-                                <exclude reference="0NH-FN-IeX"/>
-                                <exclude reference="6Fj-Ik-ge2"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="o7w-L6-Cp9"/>
-                                <include reference="4Hv-yE-i5A"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="6yL-Qs-UrE"/>
@@ -1053,8 +1034,6 @@
                                 <exclude reference="oYN-Ld-0e5"/>
                                 <include reference="tQn-Ca-WP0"/>
                                 <include reference="u8y-mp-Cmx"/>
-                                <include reference="0NH-FN-IeX"/>
-                                <include reference="6Fj-Ik-ge2"/>
                             </mask>
                         </variation>
                     </view>

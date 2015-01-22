@@ -21,8 +21,6 @@ class PointsViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-        
         // Do any additional setup after loading the view.
     }
     
@@ -31,7 +29,6 @@ class PointsViewController: UIViewController, UITableViewDataSource, UITableView
         self.fillPaddlersArray()
         self.setupPieChart()
 
-        
     }
 
     
@@ -90,7 +87,7 @@ class PointsViewController: UIViewController, UITableViewDataSource, UITableView
         }
     }
     
-    // MARK: Helper Methods
+    // MARK: Pie Chart Methods
     
     func setupPieChart() {
         let pieChartItemOC : PNPieChartDataItem = PNPieChartDataItem(value: CGFloat(currentUser.ocPoints), color: Constants.flatBlue, description: "OC1: \(currentUser.ocPoints)")
@@ -135,9 +132,22 @@ class PointsViewController: UIViewController, UITableViewDataSource, UITableView
         
         self.view.addSubview(self.pieChart!)
         
+        self.setupPieChartLabel(xPos, yPos: yPos)
         
+    }
+    
+    func setupPieChartLabel(xPos : CGFloat, yPos : CGFloat) {
+        let pieChartLabel = UILabel(frame: CGRectMake(xPos - 50, yPos - 20.0, 100.0, 20))
         
+        pieChartLabel.textColor = Constants.darkGreyFont
+        pieChartLabel.font = UIFont(name: "HelveticaNeue", size: 12)
+        pieChartLabel.alpha = 0
+        pieChartLabel.text = "Your Points:"
+        self.view.addSubview(pieChartLabel)
         
+        UIView.animateWithDuration(1.0, animations: { () -> Void in
+            pieChartLabel.alpha = 1.0
+        })
     }
 
 }
