@@ -130,7 +130,7 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
     }
     
     func checkForCompletion(workout : OCWorkouts, indexPath : NSIndexPath) {
-
+        
         var relation = workout.relationForKey("whoCompleted")
         var query = relation.query()
         query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) -> Void in
@@ -146,6 +146,7 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
             }
             
         }
+        
 
     }
 
@@ -168,10 +169,10 @@ class OCViewController: UIViewController, UITableViewDataSource, UITableViewDele
         cell.workoutCompleted = false
         if workoutsArray.count != 0 {
         var workout = workoutsArray[indexPath.row]
-            self.checkForCompletion(workout, indexPath: indexPath)
-            
-            cell.dayLabel.text = workout.day + ":"
-            cell.workoutLabel.text = workout.workout
+        self.checkForCompletion(workout, indexPath: indexPath)
+
+        cell.dayLabel.text = workout.day + ":"
+        cell.workoutLabel.text = workout.workout
         }
         
         return cell

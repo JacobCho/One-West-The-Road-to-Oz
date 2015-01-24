@@ -11,9 +11,10 @@ import Parse
 
 class InfoViewController: UIViewController {
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    // MARK: Table View Data Source
+    
 
 }

@@ -36,6 +36,9 @@
 		52814F271A2D82B100835680 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52814F261A2D82B100835680 /* User.swift */; };
 		52ACA1FD1A6E12DB0068A83F /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ACA1FC1A6E12DB0068A83F /* InfoViewController.swift */; };
 		52ACA1FF1A6F3D6D0068A83F /* StoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ACA1FE1A6F3D6D0068A83F /* StoryboardExtension.swift */; };
+		52ACA2031A745D950068A83F /* TrainingInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ACA2021A745D950068A83F /* TrainingInfoViewController.swift */; };
+		52ACA2051A7464C90068A83F /* RaceInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ACA2041A7464C90068A83F /* RaceInfoViewController.swift */; };
+		52ACA2071A7464E40068A83F /* GeneralInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ACA2061A7464E40068A83F /* GeneralInfoViewController.swift */; };
 		52FAE9EB1A3CFE7B00427DA1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52FAE9EA1A3CFE7B00427DA1 /* Parse.framework */; };
 		52FAE9ED1A3CFE8C00427DA1 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52FAE9EC1A3CFE8C00427DA1 /* Bolts.framework */; };
 		52FAE9F41A4398F900427DA1 /* GymWorkoutsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FAE9F31A4398F900427DA1 /* GymWorkoutsTableViewCell.swift */; };
@@ -92,6 +95,9 @@
 		52814F261A2D82B100835680 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		52ACA1FC1A6E12DB0068A83F /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		52ACA1FE1A6F3D6D0068A83F /* StoryboardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardExtension.swift; sourceTree = "<group>"; };
+		52ACA2021A745D950068A83F /* TrainingInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingInfoViewController.swift; sourceTree = "<group>"; };
+		52ACA2041A7464C90068A83F /* RaceInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaceInfoViewController.swift; sourceTree = "<group>"; };
+		52ACA2061A7464E40068A83F /* GeneralInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralInfoViewController.swift; sourceTree = "<group>"; };
 		52FAE9E21A3A565C00427DA1 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = "../parse-library-1.6.0/ParseCrashReporting.framework"; sourceTree = "<group>"; };
 		52FAE9E61A3CFD9000427DA1 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
 		52FAE9E81A3CFDA300427DA1 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -184,6 +190,7 @@
 		5213D17F1A2D2B8B00BF5098 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				52ACA1FE1A6F3D6D0068A83F /* StoryboardExtension.swift */,
 				52814F171A2D7B6800835680 /* One West The Road to Oz-Bridging-Header.h */,
 				5213D1811A2D2B8B00BF5098 /* AppDelegate.swift */,
 				5213D1801A2D2B8B00BF5098 /* Info.plist */,
@@ -261,18 +268,36 @@
 		52814F231A2D7CA000835680 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				525527CF1A5DE13F00CDBCB4 /* PointsViewController.swift */,
+				52ACA2091A7465030068A83F /* Workouts Section */,
+				52ACA2081A7464E90068A83F /* Info Section */,
 				527483131A37BEB500C51315 /* LoginViewController.swift */,
-				52FC39AE1A30FC4000B56BE9 /* OCViewController.swift */,
-				52296D911A36D8560078919E /* WorkoutsTabBarController.swift */,
-				52FC39AC1A30FC1E00B56BE9 /* GymViewController.swift */,
 				523AB8701A2EC55D005C7A66 /* CenterViewController.swift */,
-				52ACA1FC1A6E12DB0068A83F /* InfoViewController.swift */,
 				5211A64B1A2D92A2005CB6F2 /* ContainerViewController.swift */,
-				52ACA1FE1A6F3D6D0068A83F /* StoryboardExtension.swift */,
 				52814F1F1A2D7C8A00835680 /* NavDrawerViewController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		52ACA2081A7464E90068A83F /* Info Section */ = {
+			isa = PBXGroup;
+			children = (
+				52ACA2021A745D950068A83F /* TrainingInfoViewController.swift */,
+				52ACA2041A7464C90068A83F /* RaceInfoViewController.swift */,
+				52ACA2061A7464E40068A83F /* GeneralInfoViewController.swift */,
+				52ACA1FC1A6E12DB0068A83F /* InfoViewController.swift */,
+			);
+			name = "Info Section";
+			sourceTree = "<group>";
+		};
+		52ACA2091A7465030068A83F /* Workouts Section */ = {
+			isa = PBXGroup;
+			children = (
+				525527CF1A5DE13F00CDBCB4 /* PointsViewController.swift */,
+				52FC39AE1A30FC4000B56BE9 /* OCViewController.swift */,
+				52296D911A36D8560078919E /* WorkoutsTabBarController.swift */,
+				52FC39AC1A30FC1E00B56BE9 /* GymViewController.swift */,
+			);
+			name = "Workouts Section";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -411,6 +436,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				527483141A37BEB500C51315 /* LoginViewController.swift in Sources */,
+				52ACA2071A7464E40068A83F /* GeneralInfoViewController.swift in Sources */,
 				525527D01A5DE13F00CDBCB4 /* PointsViewController.swift in Sources */,
 				525527D21A5DE1B200CDBCB4 /* PointsTableViewCell.swift in Sources */,
 				52296D921A36D8560078919E /* WorkoutsTabBarController.swift in Sources */,
@@ -418,6 +444,7 @@
 				52FC39A91A30F4F900B56BE9 /* GymWorkouts.swift in Sources */,
 				52FC39AD1A30FC1E00B56BE9 /* GymViewController.swift in Sources */,
 				52814F271A2D82B100835680 /* User.swift in Sources */,
+				52ACA2031A745D950068A83F /* TrainingInfoViewController.swift in Sources */,
 				527483161A3924D200C51315 /* Global.swift in Sources */,
 				52ACA1FF1A6F3D6D0068A83F /* StoryboardExtension.swift in Sources */,
 				52814F251A2D829600835680 /* NavDrawerTableCell.swift in Sources */,
@@ -425,6 +452,7 @@
 				52FC39AB1A30F90800B56BE9 /* OCWorkouts.swift in Sources */,
 				5211A64C1A2D92A2005CB6F2 /* ContainerViewController.swift in Sources */,
 				523AB8711A2EC55D005C7A66 /* CenterViewController.swift in Sources */,
+				52ACA2051A7464C90068A83F /* RaceInfoViewController.swift in Sources */,
 				5213D1821A2D2B8B00BF5098 /* AppDelegate.swift in Sources */,
 				52FC39AF1A30FC4000B56BE9 /* OCViewController.swift in Sources */,
 				52814F201A2D7C8A00835680 /* NavDrawerViewController.swift in Sources */,

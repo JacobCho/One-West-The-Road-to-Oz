@@ -24,4 +24,5 @@ class OCWorkouts : PFObject, PFSubclassing {
     @NSManaged var day : String
     @NSManaged var whoCompleted : PFRelation?
     
+    
 }
