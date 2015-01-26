@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Jacob. All rights reserved.
 //
 
-import Cocoa
+import UIKit
 
 class GeneralInfoViewController: UIViewController {
 

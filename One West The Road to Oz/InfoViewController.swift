@@ -11,10 +11,29 @@ import Parse
 
 class InfoViewController: UIViewController {
     
+    @IBOutlet weak var trainingButton: UIButton!
+    @IBOutlet weak var racesButton: UIButton!
+    @IBOutlet weak var generalButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        self.setShadows()
+        
     }
-    // MARK: Table View Data Source
+    
+    func setShadows() {
+        self.trainingButton.layer.shadowOpacity = 0.5
+        self.trainingButton.layer.shadowOffset = CGSizeMake(0, 5.0)
+        
+        self.racesButton.layer.shadowOpacity = 0.5
+        self.racesButton.layer.shadowOffset = CGSizeMake(0, 5.0)
+        
+        self.generalButton.layer.shadowOpacity = 0.5
+        self.generalButton.layer.shadowOffset = CGSizeMake(0, 5.0)
+        
+    }
     
 
 }
